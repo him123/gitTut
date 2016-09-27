@@ -1,0 +1,330 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+
+                    <EditText
+                        android:id="@+id/et_fname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/fname"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_header"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+
+                    <EditText
+                        android:id="@+id/et_lname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/lname"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_header"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mobile"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/ll_name"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/mobile_no"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_email"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_mobile"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/email_id"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_permadd1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_email"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_permadd1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/add1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_permadd2"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_permadd1"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_permadd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/add2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_city"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_permadd2"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/city"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_state"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_city"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/state"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_country"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_state"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/country"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pincode"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_country"
+                android:layout_marginTop="10dp"
+                android:layout_height="35dp">
+
+                <EditText
+                    android:id="@+id/et_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/pincode"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/green_header"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_next"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_pincode"
+                android:layout_width="120dp"
+                android:background="@color/green_header"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="@string/next"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_below="@+id/rl_next"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/modal_close_white"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlSave"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_taskcomplete"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvVendors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"></ListView>
+
+</RelativeLayout>

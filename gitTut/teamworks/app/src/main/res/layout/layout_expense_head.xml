@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_box_bg"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@color/primaryColorDark" />
+
+    <ImageView
+        android:id="@+id/imgDeleteExpense"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:src="@drawable/icon_delete" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_exp_type"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/expense_type"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/spnExpenseType"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_exp_type"
+            android:padding="@dimen/small_margin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textEditText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_req_amt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/req_amt"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etRequestedAmt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_req_amt"
+            android:background="@color/transparent"
+            android:inputType="numberDecimal"
+            android:maxLength="9"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_slave_option" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlChildApprovals"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_app_amt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/app_amt"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etApprovedAmt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_app_amt"
+            android:background="@color/transparent"
+            android:inputType="numberDecimal"
+            android:maxLength="9"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_slave_option" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_bill_no"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/bill_no"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etBillNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_bill_no"
+            android:background="@color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:maxLength="50"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_slave_option" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_add_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgAddAttachment"
+            android:text="@string/attach_bill"
+            android:textColor="@color/primaryColorDark"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgAddAttachment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/attachment" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:minHeight="40dp">
+
+        <TextView
+            android:id="@+id/tv_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgDeleteAttachment"
+            android:autoLink="web"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:textColor="@color/primaryColorDark"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgDeleteAttachment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/delete" />
+
+    </RelativeLayout>
+
+</LinearLayout>

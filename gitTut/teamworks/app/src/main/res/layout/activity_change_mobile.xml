@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/rlBack"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/change_mobile"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_old_mobile"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ll_name"
+            android:layout_marginTop="10dp"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/tv_old_mobile"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/old_mobile"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:layout_centerVertical="true" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/tv_old_mobile"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/et_old_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green_box_bg"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_new_mobile"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_old_mobile"
+            android:layout_marginTop="10dp"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/tv_new_mobile"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/new_mobile"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:layout_centerVertical="true" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_new_mobile"
+                android:id="@+id/et_new_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green_box_bg"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rl_new_mobile"
+            android:id="@+id/rlSave"
+            android:layout_margin="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:background="@drawable/rectangle_blue"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/save"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

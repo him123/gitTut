@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rlImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/imgUserImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tvContactImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLength="1"
+            android:textColor="@color/green_header"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/btnViewPayslip"
+        android:layout_toRightOf="@+id/rlImg"
+        android:layout_toStartOf="@+id/btnViewPayslip"
+        android:singleLine="true"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textmedium" />
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp" />
+
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imgStatus"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:text="Withdraw"
+        android:textColor="@color/green_header"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlReject"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:background="@drawable/request_reject"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlApprove"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/rlReject"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:background="@drawable/request_approve"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/btnWithdraw"
+        android:layout_toRightOf="@+id/rlImg"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/txtSDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="From"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textEditText" />
+
+            <TextView
+                android:id="@+id/txtStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textEditText" />
+
+            <!-- <TextView
+                 android:id="@+id/txtRAmt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="3dp"
+                 android:singleLine="true"
+                 android:text="Requested Amount"
+                 android:textColor="@color/gray"
+                 android:textSize="@dimen/textEditText" />
+
+             <TextView
+                 android:id="@+id/txtRequestedAmt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:singleLine="true"
+                 android:text="000"
+                 android:textColor="@color/black"
+                 android:textSize="@dimen/textEditText" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/txtEDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="To"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textEditText" />
+
+            <TextView
+                android:id="@+id/txtEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textEditText" />
+
+            <!--<TextView
+                android:id="@+id/txtAAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="Approved Amount"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textEditText" />
+
+            <TextView
+                android:id="@+id/txtApprovedAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="000"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textEditText" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/btnWithdraw"
+        android:layout_toStartOf="@+id/btnWithdraw"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtAAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Amount: "
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textEditText" />
+
+        <TextView
+            android:id="@+id/txtApprovedAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:singleLine="true"
+            android:text="000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textEditText" />
+    </LinearLayout>
+</RelativeLayout>

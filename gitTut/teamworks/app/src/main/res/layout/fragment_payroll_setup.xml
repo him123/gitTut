@@ -1,0 +1,568 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_advanceSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Advance Setting"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColorDark"
+            android:gravity="right"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:padding="7dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_payroll"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_advanceSetting"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/payroll_enable"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <ToggleButton
+                android:id="@+id/bt_payroll_enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_selector"
+                android:checked="false"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_next_back"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rectangle_blue">
+
+                <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/save_update"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/svMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_next_back"
+            android:layout_below="@+id/rl_payroll"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_breakup_salary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tv_allowances"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/allowances"
+                    android:textSize="17sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_basic_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_allowances"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/basic_salary" />
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <EditText
+                            android:id="@+id/et_basic_salary"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/textEditText"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="@dimen/textSuggestion"
+                            android:layout_toRightOf="@+id/et_basic_salary"
+                            android:text="@string/of_ctc" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_hra"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_basic_salary"
+                    android:layout_marginTop="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_hra"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/cb_hra"
+                        android:text="@string/hra" />
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <EditText
+                            android:id="@+id/et_hra"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/textEditText"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="@dimen/textSuggestion"
+                            android:layout_toRightOf="@+id/et_hra"
+                            android:text="@string/of_basic" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_conveyance"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_hra"
+                    android:layout_marginTop="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_conveyance"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/cb_conveyance"
+                        android:text="@string/conveyance" />
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <EditText
+                            android:id="@+id/et_conveyance"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/textEditText"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="@dimen/textSuggestion"
+                            android:layout_toRightOf="@+id/et_conveyance"
+                            android:text="@string/rs_per_month" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_medical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_conveyance"
+                    android:layout_marginTop="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_medical"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/cb_medical"
+                        android:text="@string/medical" />
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <EditText
+                            android:id="@+id/et_medical"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/textEditText"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/et_medical"
+                            android:textSize="@dimen/textSuggestion"
+                            android:text="@string/rs_per_month" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_other_allowances"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_medical"
+                    android:layout_marginTop="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_other_allowances"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/cb_other_allowances"
+                        android:text="@string/variable_amount" />
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <EditText
+                            android:id="@+id/et_variable_amt"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:inputType="numberDecimal"
+                            android:textSize="@dimen/textEditText"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/et_variable_amt"
+                            android:textSize="@dimen/textSuggestion"
+                            android:text="@string/of_basic" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_metrocity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_other_allowances"
+                    android:layout_marginTop="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_metrocity"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/cb_metrocity"
+                        android:text="@string/mertocity" />
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <ToggleButton
+                            android:id="@+id/bt_metrocity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/toggle_selector"
+                            android:checked="false"
+                            android:textOff=""
+                            android:textOn="" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_metrocity_text"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_metrocity"
+                    android:gravity="left"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/metrocity_text"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_deductions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_metrocity_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/deductions"
+                    android:textSize="17sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_pf"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tv_deductions"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pff"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <CheckBox
+                            android:id="@+id/cb_pf"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:checked="true"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/cb_pf"
+                            android:text="@string/pf" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_employee_contribution"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/rl_pff">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rl1"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/employee_contribution" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl1"
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true">
+
+                            <EditText
+                                android:id="@+id/et_employee_contribution"
+                                android:layout_width="70dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:inputType="numberDecimal"
+                                android:textSize="@dimen/textEditText"
+                                android:singleLine="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="@dimen/textSuggestion"
+                                android:layout_toRightOf="@+id/et_employee_contribution"
+                                android:text="@string/of_basic" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_employer_contribution"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/rl_employee_contribution">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rl2"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/employer_contribution" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl2"
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true">
+
+                            <EditText
+                                android:id="@+id/et_employer_contribution"
+                                android:layout_width="70dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:inputType="numberDecimal"
+                                android:textSize="@dimen/textEditText"
+                                android:singleLine="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="@dimen/textSuggestion"
+                                android:layout_toRightOf="@+id/et_employer_contribution"
+                                android:text="@string/of_basic" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_working_day_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_pf"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/working_day_policy" />
+
+                    <Spinner
+                        android:id="@+id/spnWorkingDayPolicy"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:entries="@array/working_day_policy"
+                        android:padding="@dimen/small_margin"
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/rl_working_day_policy" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

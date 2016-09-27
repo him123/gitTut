@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp">
+
+            <RelativeLayout
+                android:id="@+id/rlImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15sp"
+                    android:maxLength="1"
+                    android:textColor="@color/green_header" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rlImg">
+
+
+                <TextView
+                    android:textColor="@color/gray"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tvRole"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_marginRight="10dp"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@+id/tvRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/img1"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/header"
+            android:layout_width="5dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/rectangle_blue_vertical"
+            android:layout_height="50dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_below="@+id/img1" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

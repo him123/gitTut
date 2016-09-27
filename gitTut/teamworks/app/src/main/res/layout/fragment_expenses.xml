@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlDate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relativeLeftArrow"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btnArrowleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_left"
+                android:clickable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvMonthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/relativeLeftArrow"
+            android:layout_toRightOf="@+id/relativeLeftArrow"
+            android:focusable="false"
+            android:singleLine="true"
+            android:text="Select Month and Year"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeRightArrow"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tvMonthYear"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btnArrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_right"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <com.bigbang.superteam.pulltorefresh.PullToRefreshView xmlns:ptr="http://schemas.android.com/apk/res/com.bigbang.teamworks"
+        android:id="@+id/lvExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rlDate"
+        android:layout_alignStart="@+id/rlDate"
+        android:layout_below="@+id/rlDate"
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvNoHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="No leave applied for selected month!!"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlCreate"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/add"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

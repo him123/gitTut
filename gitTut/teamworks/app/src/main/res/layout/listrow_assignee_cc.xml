@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:id="@+id/relativeCheck"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" >
+
+            <ImageButton
+                android:id="@+id/check"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/chacked"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/textmedium"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:ellipsize="end"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

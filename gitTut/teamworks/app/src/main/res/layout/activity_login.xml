@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green_box_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/register_text"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textmedium" />
+
+        <RelativeLayout
+            android:paddingLeft="20dp"
+            android:id="@+id/rlRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/signup"
+                android:textColor="@color/green_header"
+                android:textSize="@dimen/textmedium" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logo_">
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_username"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rlLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp">
+
+        <!--<TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/client_mobile"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />-->
+
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tvMobile"
+            android:background="@color/transparent"
+            android:inputType="number"
+            android:maxLength="10"
+            android:hint="@string/client_mobile"
+            android:textColorHint="@color/gray"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green_header" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_password"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rl_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <!--<TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/password"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />-->
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/password"
+            android:textColorHint="@color/gray"
+            android:layout_toRightOf="@+id/tvPassword"
+            android:background="@color/transparent"
+            android:inputType="textPassword"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green_header" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_password"
+        android:layout_margin="20dp"
+        android:background="@drawable/rectangle_blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlLogin"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/forgot_password"
+            android:textColor="@color/green_header"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

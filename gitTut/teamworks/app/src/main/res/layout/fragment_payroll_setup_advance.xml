@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_back"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:text="Advance Settings"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_next_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rectangle_blue">
+
+            <TextView
+                android:id="@+id/tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/save_update"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_next_back"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/rl_payroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_working_day_policy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/working_policy" />
+
+                <Spinner
+                    android:id="@+id/spnWorkingDayPolicy"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:entries="@array/working_policy"
+                    android:padding="@dimen/small_margin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_one_hrs_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rl1"
+                    android:text="@string/one_hrs_deduction" />
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/etOneHrsDeduction"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/etOneHrsDeduction"
+                        android:text="@string/percentage"
+                        android:textSize="@dimen/textEditText" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_two_hrs_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rl2"
+                    android:text="@string/two_hrs_deduction" />
+
+                <RelativeLayout
+                    android:id="@+id/rl2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/etTwoHrsDeduction"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/etTwoHrsDeduction"
+                        android:text="@string/percentage"
+                        android:textSize="@dimen/textEditText" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_three_hrs_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rl3"
+                    android:text="@string/three_hrs_deduction" />
+
+                <RelativeLayout
+                    android:id="@+id/rl3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/etThreeHrsDeduction"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/etThreeHrsDeduction"
+                        android:text="@string/percentage"
+                        android:textSize="@dimen/textEditText" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_four_hrs_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rl4"
+                    android:text="@string/four_hrs_deduction" />
+
+                <RelativeLayout
+                    android:id="@+id/rl4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/etFourHrsDeduction"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/etFourHrsDeduction"
+                        android:text="@string/percentage"
+                        android:textSize="@dimen/textEditText" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_five_hrs_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rl5"
+                    android:text="@string/five_hrs_deduction" />
+
+                <RelativeLayout
+                    android:id="@+id/rl5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/etFiveHrsDeduction"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/etFiveHrsDeduction"
+                        android:text="@string/percentage"
+                        android:textSize="@dimen/textEditText" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_late_allowed_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/late_allowed_time" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/etLateAllowedTime"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:maxLength="2"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/etLateAllowedTime"
+                        android:text="@string/per_hrs"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_note_text"
+                android:layout_width="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_lateHrsPolicy_text"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:gravity="left"
+                    android:text="@string/late_hrs_policy_text"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hrs_cal_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/hrs_cal_type" />
+
+                <Spinner
+                    android:id="@+id/spnHoursCalculationType"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:entries="@array/hours_calculation_type"
+                    android:padding="@dimen/small_margin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

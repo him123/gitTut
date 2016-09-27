@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/green_header">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Attendance"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/medium_margin">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btnPressedColor"
+                android:layout_weight="1"
+                android:text="@string/Attendance"
+                android:padding="@dimen/medium_margin"
+                android:textColor="@color/white"
+                android:id="@+id/btnAttendance" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btnColor"
+                android:layout_weight="1"
+                android:text="@string/Leave"
+                android:padding="@dimen/medium_margin"
+                android:textColor="@color/white"
+                android:id="@+id/btnLeave" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/large_margin"
+            android:weightSum="4"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/linearLayoutAttendance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/medium_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/textmedium"
+                    android:layout_margin="@dimen/small_margin" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.6"
+                    android:padding="@dimen/small_margin"
+                    android:entries="@array/location_type"
+                    android:prompt="@string/select_location"
+                    android:id="@+id/spnrLocation"
+                    android:layout_margin="@dimen/small_margin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:id="@+id/linear_vendorlocation"
+                android:visibility="visible"
+                android:layout_margin="@dimen/medium_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vendor_client"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/textmedium"
+                    android:layout_margin="@dimen/small_margin" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.6"
+                    android:padding="@dimen/small_margin"
+                    android:entries="@array/location_type"
+                    android:prompt="@string/select_vendor"
+                    android:id="@+id/spinner_vendorlocation"
+                    android:layout_margin="@dimen/small_margin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:id="@+id/linear_AddressList"
+                android:layout_margin="@dimen/medium_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/textmedium"
+                    android:layout_margin="@dimen/small_margin" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.6"
+                    android:padding="@dimen/small_margin"
+                    android:entries="@array/location_type"
+                    android:prompt="@string/select_address"
+                    android:id="@+id/spinnerAddresslist"
+                    android:layout_margin="@dimen/small_margin" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/checkin"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btnselector"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/btnCheckIn" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/checkout"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btnselector"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/btnCheckOut" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/manualrequest"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btnselector"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/btnManualRequest" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/history"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btnselector"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/btnAttendanceHistory" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/large_margin"
+            android:weightSum="3"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/linearLayoutLeave">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/applyforleave"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btnselector"
+                android:padding="@dimen/medium_margin"
+                android:layout_margin="@dimen/medium_margin"
+                android:id="@+id/btnApplyforLeave" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/leavestatus"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btnselector"
+                android:padding="@dimen/medium_margin"
+                android:layout_margin="@dimen/medium_margin"
+                android:id="@+id/btnLeaveStatus" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/leavebalance"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btnselector"
+                android:padding="@dimen/medium_margin"
+                android:layout_margin="@dimen/medium_margin"
+                android:id="@+id/btnLeaveBalance" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

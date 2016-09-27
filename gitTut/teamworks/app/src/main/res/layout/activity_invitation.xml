@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:id="@+id/rlLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/textmedium"
+                android:text="@string/logout"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/rlBack"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/company_invitation"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/footer"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_skip"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle_blue"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/skip"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_invitations"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+    <TextView
+        android:id="@+id/tvFail"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_below="@+id/header"
+        android:text="@string/invitations_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/imgEmpty"
+        android:visibility="gone"
+        android:background="@drawable/empty_state"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

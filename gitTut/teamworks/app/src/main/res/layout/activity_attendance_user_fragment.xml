@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnManualRequest"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_button"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_white"
+            android:text="@string/manual_request"
+            android:textColor="@color/green_header"
+            android:textSize="@dimen/textmedium" />
+
+        <Button
+            android:id="@+id/btnAttendanceHistory"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_button"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_white"
+            android:text="@string/history"
+            android:textColor="@color/green_header"
+            android:textSize="@dimen/textmedium" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tvDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="2dp"
+                    android:focusable="false"
+                    android:text="25 Aug,"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tvDate1"
+                    android:focusable="false"
+                    android:gravity="bottom"
+                    android:text="2015"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/relativeDate"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tvTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="2dp"
+                    android:focusable="false"
+                    android:text="25 Aug"
+                    android:textSize="@dimen/textLarge" />
+
+                <TextView
+                    android:id="@+id/tvTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/tvTime1"
+                    android:focusable="false"
+                    android:gravity="bottom"
+                    android:text="2015"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeTime"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/location"
+                    android:textSize="@dimen/textmedium" />
+
+                <Spinner
+                    android:id="@+id/spnrLocation"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:entries="@array/location_type"
+                    android:padding="@dimen/small_margin"
+                    android:prompt="@string/select_location"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_vendorlocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLocation"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvClientVendorTitle"
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/vendor_client"
+                    android:textSize="@dimen/textmedium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_sp_select"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinner_vendorlocation"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:padding="@dimen/small_margin"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_AddressList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_vendorlocation"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/address"
+                    android:textSize="@dimen/textmedium" />
+
+                <Spinner
+                    android:id="@+id/spinner_addressList"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:padding="@dimen/small_margin"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCheckIn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_below="@+id/linear_AddressList"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rectangle_blue"
+                android:text="@string/checkin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textmedium" />
+
+
+            <Button
+                android:id="@+id/btnCheckOut"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_below="@+id/btnCheckIn"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangle_white"
+                android:text="@string/check_out"
+                android:textColor="@color/green_header"
+                android:textSize="@dimen/textmedium"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

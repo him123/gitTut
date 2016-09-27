@@ -1,0 +1,39 @@
+<resources>
+    <declare-styleable name="CircularProgressView">
+        <attr name="cpv_progress" format="float" />
+        <attr name="cpv_maxProgress" format="float" />
+        <attr name="cpv_animDuration" format="integer" />
+        <attr name="cpv_animSwoopDuration" format="integer" />
+        <attr name="cpv_animSyncDuration" format="integer" />
+        <attr name="cpv_color" format="color" />
+        <attr name="cpv_thickness" format="dimension" />
+        <attr name="cpv_indeterminate" format="boolean" />
+        <attr name="cpv_animAutostart" format="boolean" />
+        <attr name="cpv_animSteps" format="integer" />
+
+
+    </declare-styleable>
+
+    <declare-styleable name="PullToRefresh">
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrHeaderBackground" format="reference|color" />
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+        <attr name="ptrMode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="panelHeight" format="dimension" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="paralaxOffset" format="dimension" />
+        <attr name="fadeColor" format="color" />
+        <attr name="flingVelocity" format="integer" />
+        <attr name="dragView" format="reference" />
+        <attr name="overlay" format="boolean"/>
+    </declare-styleable>
+
+</resources>

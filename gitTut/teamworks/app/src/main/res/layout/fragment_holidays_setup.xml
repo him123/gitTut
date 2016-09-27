@@ -1,0 +1,291 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llLeaveType"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/etSickLeave"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical|right"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingRight="10dp"
+                        android:text="10"
+                        android:textSize="@dimen/textmedium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/etSickLeave"
+                        android:text="@string/sick_leave"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/green_box_bg" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/etCasualLeave"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical|right"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingRight="10dp"
+                        android:text="10"
+                        android:textSize="@dimen/textmedium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/etCasualLeave"
+                        android:text="@string/casual_leave"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/green_box_bg" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/etPaidLeave"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical|right"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingRight="10dp"
+                        android:text="10"
+                        android:textSize="@dimen/textmedium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/etPaidLeave"
+                        android:text="@string/paid_leave"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/etOptionalLeave"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical|right"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingRight="10dp"
+                        android:text="10"
+                        android:textSize="@dimen/textmedium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/etOptionalLeave"
+                        android:text="@string/optional_leave"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/green_box_bg" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_next_back"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rectangle_blue">
+
+                <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/save_update"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_holidays"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/llLeaveType"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvHolidayList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/holiday_list"
+                android:textColor="@color/green_header"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlAdd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/add_address"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_def_holidays"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_holidays"
+            android:layout_margin="10dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/rectangle_blue"
+            android:text="Load Default Holidays" />
+
+
+        <ListView
+            android:id="@+id/lv_holidays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_next_back"
+            android:layout_below="@+id/btn_def_holidays"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></ListView>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

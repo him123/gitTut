@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_back"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:text="@string/userPayroll"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_next_back"
+        android:layout_below="@+id/header"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/linearLeaveUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="@string/user_detail"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvEmployeeCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/employee_code" />
+
+                <EditText
+                    android:id="@+id/edEmployeeCode"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvDesignation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/designation" />
+
+                <EditText
+                    android:id="@+id/edDesignation"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvPANNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/pan_no" />
+
+                <EditText
+                    android:id="@+id/edPANNo"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvPFAccountNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/edPFAccountNo"
+                    android:text="@string/pf_act_no" />
+
+                <EditText
+                    android:id="@+id/edPFAccountNo"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvBankName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bank_name" />
+
+                <EditText
+                    android:id="@+id/edBankName"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvBankActName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/edBankActNumber"
+                    android:text="@string/bank_act_no" />
+
+                <EditText
+                    android:id="@+id/edBankActNumber"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textEditText" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvEarnnings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/earnings"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ctc" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edCTC"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edCTC"
+                        android:text="@string/rs"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/basic_sal" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edBasicSalary"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edBasicSalary"
+                        android:text="@string/of_ctc"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/hra" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edHRA"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edHRA"
+                        android:text="@string/of_basic"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/medical_allo" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edMedicalAllow"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edMedicalAllow"
+                        android:text="@string/rs_per_month"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/conveyance" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edConveyance"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edConveyance"
+                        android:text="@string/rs_per_month"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/variable_amt" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edVariablePayAmt"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edVariablePayAmt"
+                        android:text="@string/of_ctc"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDeduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/deductions"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/pf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rlEmployee"
+                    android:text="@string/employee_contribution" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEmployee"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="2dp">
+
+                    <EditText
+                        android:id="@+id/edEmployeeCon"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edEmployeeCon"
+                        android:text="@string/of_basic"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rlEmployer"
+                    android:text="@string/employer_contribution" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEmployer"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="2dp">
+
+                    <EditText
+                        android:id="@+id/edEmployerCon"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edEmployerCon"
+                        android:text="@string/of_basic"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvInvestment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/investment"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/actual_rent" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edActualRentPaid"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edActualRentPaid"
+                        android:text="@string/rs_per_annum"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rl1"
+                    android:text="@string/investment_80c" />
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/edInvestment80C"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edInvestment80C"
+                        android:text="@string/rs_per_annum"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/investment_80d" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <EditText
+                        android:id="@+id/edInvestment80D"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textEditText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/edInvestment80D"
+                        android:text="@string/rs_per_annum"
+                        android:textSize="@dimen/textSuggestion" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_next_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rectangle_blue">
+
+            <TextView
+                android:id="@+id/tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/save_update"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

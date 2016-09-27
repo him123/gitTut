@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bigbang.superteam">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <permission
+        android:name="com.bigbang.superteam.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.bigbang.superteam.permission.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="com.bigbang.superteam.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.bigbang.teamworks.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".Application.TeamWorkApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <!-- https://play.google.com/store/apps/details?id=kx.music.equalizer.player -->
+                <data
+                    android:host="bigbang.teamworks"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login_register.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".login_register.ForgotPasswordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".login_register.InvitationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.UpdateAttendanceDetails"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.ManualAttendanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.AttendanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.LeaveStatusActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.LeaveBalanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.AttendanceHistoryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.LocationApprovalDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.ClientVendorAddressListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.CreateWorkActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ActivityFileBrowser"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="File browser"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ActivityFileBrowser.INTENT_ACTION_SELECT_FILE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login_register.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".login_register.VerifyMobileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".login_register.CompanySetupActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".login_register.SelectHolidayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.UpdateWorkActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.ApprovalDetail_Activity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.NotificationDetail_Activity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.UsersActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.UserDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.InviteUserActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".project.CreateProjectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".project.ProjectDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".project.GanttChartActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.AdminSettingsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".manager.ManagerSettingsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".tracking.TrackingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".tracking.UserDailyReportActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".tracking.CurrentLocationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.ViewWorkItemActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DisplayFullscreenImage"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.SelectLocationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.ApplyLeaveActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.AttendanceDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MyDialog"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".user.UpdateProfileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.ChangePasswordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.ChangeMobileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.DefaultWorkLocation"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.WorkApprovalDetail_Activity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.LeaveDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.LeaveAttendanceManager"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.UpdateTimeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.UserLeaveHistory"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_dashboard_user"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".fragment.UserHistoryFragment"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_dashboard_user"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.WorkItemExpense"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.EditWorkitem"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".user.ResetPasswordForMember"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.ResignUserActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.UpdateCompanyProfileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".customer_vendor.CreateCustomerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".customer_vendor.CustomerDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".customer_vendor.AddressActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.SelectLocationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.ResignationApprovalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.YourManagersActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.CustomerVendorApprovalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.AddressApprovalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".customer_vendor.CustomerVendorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.AdminDashboardNewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".manager.ManagerDashboardNewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.UserDashboardNewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".login_register.AddHoliday"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.LeaveStatusAdminActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.SelectTaskActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.SelectAssigneeCC"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.SelectDaysActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.FilterTasksActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".slidingmap.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".workitem.SelectVendorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.LeaveApprovalDetails"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".leave_attendance.UpdateLeaveBalanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Receive Wi-Fi connection state changes -->
+        <receiver android:name=".WifiReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.bigbang.teamworks.WIFI_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".util.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.bigbang.teamworks.WORK_ITEM" />
+            </intent-filter>
+        </receiver>
+        <!-- App update receiver -->
+        <receiver android:name=".UpdateAppVersionReceiver">
+            <intent-filter android:priority="1000">
+
+                <!-- other actions I need -->
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.bigbang.teamworks" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <receiver android:name=".UserTrackingReceiver" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.bigbang.teamworks.CUSTOM_INTENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service
+            android:name=".alarm.UserTrackingReceiverIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".util.GPSTrackerContinueUpdate"
+            android:enabled="true" />
+        <service
+            android:name=".util.LocationService"
+            android:allowBackup="true"
+            android:enabled="true" />
+        <service
+            android:name=".util.LocationServiceGF"
+            android:allowBackup="true"
+            android:enabled="true" />
+
+        <receiver android:name=".alarm.SimpleWakefulReceiver" />
+        <receiver
+            android:name=".DeviceBootReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- android:exported="true" added on 18 jul 2016 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <!-- Added on 18 jul 2016 -->
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+
+        <!-- play store key -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AIzaSyDpSPky7XPW1rxVdY1L84Pmk2QUkeFxLik" /> -->
+
+
+        <!-- debug key -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AIzaSyBUB32rOAkXRw_0o3hUWN69qetDUpU-mjQ" /> -->
+
+
+        <!-- Bhavik -->
+        <!-- debug key 2 -->
+        <!--
+              <meta-data
+              android:name="com.google.android.maps.v2.API_KEY"
+              android:value="AIzaSyDQV7NNWW2ClvWIqyvVcvj35DkLIM9C9fs" />
+        -->
+
+
+        <!-- Rutu -->
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCVEhl6bTWMyWG_C71SStiMtPcgMl_8Dsk" />
+        -->
+
+
+        <!-- Gaurav Debug and Release -->
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBe9VUVux6WtoS5vW_HOsqOhBUc8gjKvrk" />
+        -->
+
+
+        <!-- NEW DEVELOPER ACCOUNT - On Play store -->
+        <!-- Gaurav Debug and Release -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBkJTOEdXW0dhD0y5-MDTfHbQLiMGsfolE" />
+
+        <!-- PlayStore Release -->
+        <!--
+           <meta-data
+           android:name="com.google.android.maps.v2.API_KEY"
+           android:value="AIzaSyCNpoHZ4T2ScENma2z0EYu_7csZ0fnCZxg" />
+        -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".payroll.UpdateUserPayrollActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_update_user_payroll"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Fires when GPS status has been changed -->
+        <receiver android:name=".GpsLocationReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".TimeChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Demo Examples -->
+        <service
+            android:name=".alarmCloclExample.AlarmService"
+            android:enabled="true" />
+
+        <receiver android:name=".alarmCloclExample.AlarmReceiver" />
+        <!-- Demo Examples -->
+
+        <activity
+            android:name=".payroll.PaySlipAdminActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_pay_slip_admin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".payroll.UserPaySLipActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_user_pay_slip"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".payroll.PayrollSetupAdvanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_user_pay_slip"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".payroll.EmailDialogActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_email_dialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".expenses.AddExpensesActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_add_expenses"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".expenses.UpdateExpenseActivity"
+            android:label="@string/title_activity_update_expense"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".task.AddTaskActivity"
+            android:label="@string/title_activity_add_task"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".task.AssignCCActivity"
+            android:label="@string/title_activity_assign_cc"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".task.CustomerVendorActivity"
+            android:label="@string/title_activity_customer_vendor"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/payroll"
+        android:background="@color/green_header"
+        android:padding="@dimen/medium_margin"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/viewpayrollreport"
+        android:layout_margin="@dimen/medium_margin"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@drawable/btnselector"
+            android:layout_weight="0.4"
+            android:text="@string/runpayroll"
+            android:padding="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_gravity="center_vertical" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_weight="0.3"
+            android:padding="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_gravity="center_vertical" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_weight="0.3"
+            android:padding="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_Payroll">
+
+    </ListView>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/rlBack"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/resignation"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="120dp">
+
+            <EditText
+                android:id="@+id/etReason"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="@string/resign_reason"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="top"
+                android:textSize="15sp"
+                android:maxLines="4"
+                android:maxLength="200"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green_box_bg"
+                android:layout_alignParentBottom="true" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:textSize="12sp"
+                android:text="200"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/rlPassword"
+            android:id="@+id/rlResign"
+            android:layout_width="match_parent"
+            android:background="@drawable/rectangle_blue"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/submit_resignation"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rlResign"
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resignation_title"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

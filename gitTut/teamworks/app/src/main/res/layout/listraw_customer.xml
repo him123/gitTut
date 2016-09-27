@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:id="@+id/rlImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"
+                android:maxLength="1"
+                android:textColor="@color/green_header" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green_box_bg"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentBottom="true" />
+
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rlCall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:background="@drawable/call_blue"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/rlImg">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/date"
+                android:singleLine="true"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

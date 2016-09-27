@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.bigbang.superteam.payroll.PaySlipAdminActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_back"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:text="@string/view_payslip"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_blue">
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save_update"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_save"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeDate"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvMonthYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Select Month and Year"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLeftArrow"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/tvMonthYear"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/btnArrowleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/arrow_left"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeRightArrow"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvMonthYear"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/btnArrowRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/arrow_right"
+                        android:clickable="false" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_total_working_days"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/total_working_day" />
+
+                <EditText
+                    android:id="@+id/et_total_working_days"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_total_Present_days"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/total_Present_days" />
+
+                <EditText
+                    android:id="@+id/et_total_Present_days"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_total_leave_taken"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/total_leave_taken" />
+
+                <EditText
+                    android:id="@+id/et_total_leave_taken"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvEarnnings"
+                android:textSize="17sp"
+                android:text="@string/earnings"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_basic_salary"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/basic_salary" />
+
+                <EditText
+                    android:id="@+id/et_basic_salary"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hra"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/hra" />
+
+                <EditText
+                    android:id="@+id/et_hra"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_special_allow"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/special_allow" />
+
+                <EditText
+                    android:id="@+id/et_special_allow"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_conveyance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/conveyance" />
+
+                <EditText
+                    android:id="@+id/et_conveyance"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_medical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/medical_allo" />
+
+                <EditText
+                    android:id="@+id/et_medical"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_variable"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/variable_amount" />
+
+                <EditText
+                    android:id="@+id/et_variable_earning"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:focusable="true"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_gross"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/gross_earnings" />
+
+                <EditText
+                    android:id="@+id/et_gross"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvDeduction"
+                android:textSize="17sp"
+                android:text="@string/deductions"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/et_pf"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/pf_employee_con" />
+
+                <EditText
+                    android:id="@+id/et_pf"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_leave_deduction"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/leave_deduction" />
+
+                <EditText
+                    android:id="@+id/et_leave_deduction"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_tds"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/tds" />
+
+                <EditText
+                    android:id="@+id/et_tds"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_professional_tax"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/professional_tax" />
+
+                <EditText
+                    android:id="@+id/et_professional_tax"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_short_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/short_deduction" />
+
+                <EditText
+                    android:id="@+id/et_short_deduction"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_gross_deduction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/gross_deduction" />
+
+                <EditText
+                    android:id="@+id/et_gross_deduction"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/black"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_net_salary"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/net_salary" />
+
+                <EditText
+                    android:id="@+id/et_net_salary"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

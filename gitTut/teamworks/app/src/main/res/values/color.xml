@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bg">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="btn">#bbe0e3</color>
+    <color name="transparent">#00000000</color>
+    <color name="green_header">#4E82DD</color>
+    <!--<color name="green_header">#04b490</color>-->
+    <!--<color name="green_btn">#00997b</color>-->
+    <color name="green_btn">#4E82DD</color>
+    <color name="divider">#999999</color>
+    <color name="bg_add_new">#f6f6f6</color>
+    <color name="green_box_bg">#E3EDFC</color>
+    <!--<color name="green_box_bg">#e0f3ef</color>-->
+    <color name="bg_slave_option">#dddddd</color>
+
+    <color name="btnColor">#00997b</color>
+    <color name="btnPressedColor">#ff00694f</color>
+
+
+    <color name="black_box">#1c1c1c</color>
+
+    <color name="cream">#FFEEDD</color>
+
+    <color name="normal_color">#Ff99BB</color>
+    <color name="pending">#F9D641</color>
+    <color name="appoved_color">#5CC45C</color>
+    <color name="rejected">#EA4E4E</color>
+
+    <color name="primaryColor">#4E82DD</color>
+    <color name="primaryColorDark">#4E82DD</color>
+    <color name="primaryColorLight">#4E82DD</color>
+    <color name="almostWhite">#EEEEEE</color>
+
+    <!-- New Design -->
+    <color name="gray">#999999</color>
+    <color name="light_gray">#95B4EB</color>
+    <color name="yellow">#F8D53F</color>
+    <color name="statusbar">#3E68B1</color>
+    <color name="red">#EA4E4E</color>
+    <color name="transparent_gray">#35999999</color>
+
+
+</resources>

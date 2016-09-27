@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCustomers"
+            android:layout_toRightOf="@+id/rlBack"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCustomers"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:text="@string/clients"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/viewCustomers"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlVendors"
+            android:layout_toRightOf="@+id/rlCustomers"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvVendors"
+                android:textColor="@color/light_gray"
+                android:textSize="17sp"
+                android:text="@string/vendors"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/viewVendors"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_below="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_add"
+        android:layout_margin="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

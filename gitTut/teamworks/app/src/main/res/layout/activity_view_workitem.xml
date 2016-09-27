@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_master"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/fl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_back"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/cream"
+        android:padding="@dimen/medium_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_taskimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/small_margin"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_itemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="Task Loading"
+                android:textSize="@dimen/textLarge"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <View style="@style/seperator_view" />
+
+            <!--Raw 9 Assigned to-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/assign_to" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemAssignedto"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 9 CC to-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/cc_to" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_ccto"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 10 TASK type of work-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/task_type" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemTypeofWork"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 2 Description-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/description" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemDescription"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 6 start time-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/start_time" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemStarttime"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 7 end time-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/end_time" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemEndTime"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 8 actual time-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/estimate_work" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemActualTime"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 4 Priority-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/priority" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemPriority"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+
+            <!--Raw 5 work location -->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/worklocation" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemLocation"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+            <!--Raw 3 Budget-->
+            <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                <TextView
+                    style="@style/viewworkitem_textviewstyle1"
+                    android:text="@string/budget" />
+
+                <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                <TextView
+                    android:id="@+id/tv_itemBudget"
+                    style="@style/viewworkitem_textviewstyle3" />
+            </LinearLayout>
+
+            <View style="@style/seperator_view" />
+
+            <LinearLayout
+                android:id="@+id/ll_optional"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View style="@style/seperator_view" />
+                <!--Raw 11-->
+                <LinearLayout
+                    android:id="@+id/ll_raw11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option1"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option11"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+                <!--Raw 12-->
+                <LinearLayout
+                    android:id="@+id/ll_raw12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option2"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option22"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+
+                <!--Raw 13-->
+                <LinearLayout
+                    android:id="@+id/ll_raw13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option3"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option33"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+                <!--Raw 14-->
+                <LinearLayout
+                    android:id="@+id/ll_raw14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option4"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option44"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+
+                <!--Raw 15-->
+                <LinearLayout
+                    android:id="@+id/ll_raw15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option5"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option55"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+                <!--Raw 16-->
+                <LinearLayout
+                    android:id="@+id/ll_raw16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option6"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option66"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+                <!--Raw 17-->
+                <LinearLayout
+                    android:id="@+id/ll_raw17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/tv_option7"
+                            style="@style/viewworkitem_textviewstyle1" />
+
+                        <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                        <TextView
+                            android:id="@+id/tv_option77"
+                            style="@style/viewworkitem_textviewstyle3" />
+                    </LinearLayout>
+
+                    <View style="@style/seperator_view" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--Raw 18-->
+            <LinearLayout
+                android:id="@+id/ll_raw18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+                    <TextView
+                        style="@style/viewworkitem_textviewstyle1"
+                        android:text="@string/createdby" />
+
+                    <TextView style="@style/viewworkitem_textviewstyle2" />
+
+                    <TextView
+                        android:id="@+id/tv_createdby"
+                        style="@style/viewworkitem_textviewstyle3" />
+                </LinearLayout>
+
+                <View style="@style/seperator_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_raw19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnExpDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btnselector"
+                    android:padding="@dimen/medium_margin"
+                    android:text="@string/expense_details"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <View style="@style/seperator_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_attachmentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:orientation="vertical"></LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_margin" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

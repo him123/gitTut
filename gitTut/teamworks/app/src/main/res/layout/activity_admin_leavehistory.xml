@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/relativeTop">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:id="@+id/relativeLeftArrow">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:background="@drawable/arrow_left"
+                    android:id="@+id/btnArrowleft"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/relativeDate"
+                android:clickable="true"
+                android:layout_toRightOf="@+id/relativeLeftArrow">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/tvDate1"
+                    android:text="25 Aug,"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:focusable="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDate2"
+                    android:text="2015"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:textColor="@color/gray"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/tvDate1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:id="@+id/relativeRightArrow"
+                android:layout_toRightOf="@+id/relativeDate">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/arrow_right"
+                    android:id="@+id/btnArrowRight"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:id="@+id/list_leave_history"
+        android:layout_below="@+id/relativeTop"
+        android:dividerHeight="0dp"></ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:id="@+id/tvNoHistory"
+        android:text="No leave applied for selected month!!"/>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bigbang.superteam.payroll.EmailDialogActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primaryColor"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="@string/payslip"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etEmailID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:ems="10"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray" />
+
+        <Button
+            android:id="@+id/btDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/primaryColor"
+            android:padding="10dp"
+            android:text="DOWNLOAD"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

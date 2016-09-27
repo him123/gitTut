@@ -1,0 +1,306 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/green_header">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tracking"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlSelectDate"
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/settings"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/rl_date"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_day"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@color/green_box_bg">
+
+                <Spinner
+                    android:id="@+id/spinnerDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:entries="@array/day_array"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="45dp"
+                    android:prompt="@string/prompt_day"></Spinner>
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_down_arrow"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_month"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/rl_day"
+                android:background="@color/green_box_bg">
+
+                <Spinner
+                    android:id="@+id/spinnerMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:entries="@array/month_array"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="45dp"
+                    android:prompt="@string/prompt_month"></Spinner>
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_down_arrow"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_year"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/rl_month"
+                android:background="@color/green_box_bg">
+
+                <Spinner
+                    android:id="@+id/spinnerYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:entries="@array/year_array"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="45dp"
+                    android:prompt="@string/prompt_year"></Spinner>
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_down_arrow"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvError"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/lv_team_members"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></ListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lv_team_members"
+            android:layout_below="@+id/rl_date">
+
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/lv_team_members_full_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/rl_date"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"></ListView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_settings_box"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_current_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/current_location" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_set_time_period"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/set_time_period" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_filtr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/change_date" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_view_map"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/view_map_only" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/view_List_only" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_view_both"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/view_both" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_date"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_month"
+            android:layout_width="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_day"
+            android:background="@color/green_box_bg"
+            android:layout_height="40dp">
+
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:prompt="@string/prompt_month"
+                android:paddingLeft="10dp"
+                android:paddingRight="45dp"
+                android:layout_height="match_parent"></Spinner>
+
+            <ImageButton
+                android:background="@drawable/icon_down_arrow"
+                android:layout_width="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="25dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_year"
+            android:layout_width="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_month"
+            android:background="@color/green_box_bg"
+            android:layout_height="40dp">
+
+            <Spinner
+                android:id="@+id/spinnerYear"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:prompt="@string/prompt_year"
+                android:paddingLeft="10dp"
+                android:paddingRight="45dp"
+                android:entries="@array/year_array"
+                android:layout_height="match_parent"></Spinner>
+
+            <ImageButton
+                android:background="@drawable/icon_down_arrow"
+                android:layout_width="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="25dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@+id/rl_date"
+        android:id="@+id/listvwLeaveStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:id="@+id/tvNoHistory"
+        android:text="No leave applied for selected month!!"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:id="@+id/linearBottom"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/btnExportExcel"
+            android:background="@color/green_header"
+            android:text="@string/export_csv"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/btnExportPdf"
+            android:background="@color/green_header"
+            android:text="@string/export_pdf"/>
+    </LinearLayout>
+</RelativeLayout>

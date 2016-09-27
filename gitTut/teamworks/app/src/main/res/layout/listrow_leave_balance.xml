@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLeaveType">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Sick Leave"
+        android:padding="5dp"
+        android:textSize="9pt"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/tvLeaveType"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="5"
+        android:textSize="9pt"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:layout_marginRight="3dp"
+        android:id="@+id/tvNumberOfLeaves"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/relativeLeaveType"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/relativeTotalLeaves"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/available_leaves"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvTotalLeaves"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="5"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/tvAvailableOfLeaves"/>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/relativeTotalLeaves"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/used_leaves"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvLeavesLeft"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="5"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/tvUsedLeavesLeft"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

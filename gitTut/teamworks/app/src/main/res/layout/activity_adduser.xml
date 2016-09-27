@@ -1,0 +1,254 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_header"
+            android:background="@color/green_header">
+
+            <RelativeLayout
+                android:id="@+id/rlBack"
+                android:layout_width="@dimen/height_header"
+                android:layout_height="@dimen/height_header">
+
+                <ImageButton
+                    android:background="@drawable/modal_close_white"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_toRightOf="@+id/rlBack"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/invite_user"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_name"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true" />
+
+                    <EditText
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent"
+                        android:id="@+id/et_Name" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mobile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/rl_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:id="@+id/tv_mobile"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_mobile"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true" />
+
+                    <EditText
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/tv_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent"
+                        android:id="@+id/et_mobile" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/rl_mobile"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_id"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true" />
+
+                    <EditText
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent"
+                        android:id="@+id/et_mailID" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/rl_email">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/role"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRole"
+                        android:prompt="@string/role"
+                        android:entries="@array/role_array"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="120dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/rl_role">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/manager"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true" />
+
+                    <Spinner
+                        android:id="@+id/spinnerManager"
+                        android:prompt="@string/role"
+                        android:entries="@array/role_array"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="120dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_add"
+                    android:layout_below="@+id/rlManager"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/rectangle_blue"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:textSize="@dimen/textmedium"
+                        android:textColor="@color/white"
+                        android:text="@string/submit_invitation"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

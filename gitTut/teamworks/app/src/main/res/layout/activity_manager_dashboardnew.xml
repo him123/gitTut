@@ -1,0 +1,548 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlMenu"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/menu"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlMenu"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlTrackingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvTrackingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvTrackingYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvTrackingDate"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAttendanceLeavesHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlMenu"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rlAttendance"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rlBack">
+
+                <TextView
+                    android:id="@+id/tvAttendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/attendance_setup"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/viewAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLeaves"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rlAttendance">
+
+                <TextView
+                    android:id="@+id/tvLeaves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/leave_setup"
+                    android:textColor="@color/light_gray"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/viewLeaves"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEveryone"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:id="@+id/imgEveryone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/task_delegate"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFilter"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_filter"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" />
+
+    <RelativeLayout
+        android:id="@+id/rlMenuBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlTasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_tasks"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tasks"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlProjects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_projects"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/projects"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAttendanceLeaves"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_attendance"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/attendance_leave"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll1"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlApprovals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_approval"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/approvals"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlTracking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_tracking"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tracking"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_notifications"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/notification"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_settings"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img7"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/settings"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlExport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_export"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/export_lable"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_expense"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img9"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/expenses"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll3"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlPayroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/menu_payroll"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img10"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/payslip"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible">
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible">
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llLeaveType"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvSickTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="@string/sick_leave"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium" />
+
+                <TextView
+                    android:id="@+id/tvSickLeave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvSickTitle"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:text="0/0"
+                    android:textSize="@dimen/textmedium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/green_box_bg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvCasualTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/casual_leave"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/tvCasualLeave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/tvCasualTitle"
+                    android:inputType="number"
+                    android:paddingRight="5dp"
+                    android:text="0/0"
+                    android:textSize="@dimen/textmedium"
+                    android:paddingLeft="10dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green_box_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/green_box_bg" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvPaidTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="@string/paid_leave"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium" />
+
+                <TextView
+                    android:id="@+id/tvPaidLeave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvPaidTitle"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:text="0/0"
+                    android:textSize="@dimen/textmedium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/green_box_bg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvOptionalTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/optional_leave"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvOptionalLeave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/tvOptionalTitle"
+                    android:inputType="number"
+                    android:paddingRight="5dp"
+                    android:text="0/0"
+                    android:textSize="@dimen/textmedium"
+                    android:paddingLeft="10dp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green_box_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/green_box_bg" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_updateBalance"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_button"
+        android:background="@drawable/rectangle_blue"
+        android:text="@string/update_balance"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/textmedium"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_below="@+id/llLeaveType" />
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_updateBalance"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/leavestatus"
+            android:textColor="@color/green_header" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="4dp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="3dp"></View>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeExport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/green_box_bg"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/export_csv" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listviewLeave"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relative1"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="0dp"></ListView>
+
+
+    <TextView
+        android:id="@+id/tvNoHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/no_leave_applied"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlApplyLeave"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

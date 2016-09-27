@@ -1,0 +1,520 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rlReject"
+        android:layout_width="match_parent"
+        android:background="@drawable/rectangle_white"
+        android:layout_height="50dp">
+
+        <TextView
+            android:textColor="@color/red"
+            android:text="@string/reject"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/rlReject"
+        android:id="@+id/rlAccept"
+        android:layout_width="match_parent"
+        android:background="@drawable/rectangle_blue"
+        android:layout_height="50dp">
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="@string/accept"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/rlAccept"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlHeader1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/green_header" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLogo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:clickable="false"
+                        android:id="@+id/imgWhite"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:clickable="false"
+                        android:layout_margin="2dp"
+                        android:id="@+id/img_profile_small"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/tvName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="@dimen/textmedium"
+                        android:maxLength="1"
+                        android:textColor="@color/green_header" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlHeader1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:singleLine="true"
+                    android:id="@+id/tvProfileName"
+                    android:textSize="@dimen/textmedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_below="@+id/tvProfileName"
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textLarge"
+                    android:textColor="@color/black" />
+
+
+                <View
+                    android:layout_marginTop="15dp"
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:id="@+id/viewName"
+                    android:layout_below="@+id/title"
+                    android:background="@color/green_header" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/view1"
+                    android:layout_below="@+id/viewName"
+                    android:background="@color/green_box_bg" />
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlName"
+                    android:layout_below="@+id/view1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/client_name"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvNewName"
+                        android:layout_marginLeft="120dp"
+                        android:textSize="@dimen/textmedium"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvOldName"
+                        android:layout_below="@+id/tvNewName"
+                        android:textSize="@dimen/textmedium"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="120dp"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvOldName"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlMobile"
+                    android:layout_below="@+id/rlName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvMobile"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/client_mobile"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvNewMobile"
+                        android:layout_marginLeft="120dp"
+                        android:textSize="@dimen/textmedium"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginLeft="120dp"
+                        android:singleLine="true"
+                        android:id="@+id/tvOldMobile"
+                        android:layout_below="@+id/tvNewMobile"
+                        android:textSize="@dimen/textmedium"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvOldMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlLandline"
+                    android:layout_below="@+id/rlMobile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLandline"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/client_landline"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvNewLandline"
+                        android:layout_marginLeft="120dp"
+                        android:textSize="@dimen/textmedium"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvOldLandline"
+                        android:layout_below="@+id/tvNewLandline"
+                        android:textSize="@dimen/textmedium"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray"
+                        android:layout_marginLeft="120dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvOldLandline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlEmail"
+                    android:layout_below="@+id/rlLandline"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/client_email"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvNewEmail"
+                        android:layout_marginLeft="120dp"
+                        android:textSize="@dimen/textmedium"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvOldEmail"
+                        android:layout_below="@+id/tvNewEmail"
+                        android:textSize="@dimen/textmedium"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray"
+                        android:layout_marginLeft="120dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvOldEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rlDesc"
+                    android:layout_below="@+id/rlEmail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/client_desc"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvNewDesc"
+                        android:layout_marginLeft="120dp"
+                        android:textSize="@dimen/textmedium"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/tvOldDesc"
+                        android:layout_below="@+id/tvNewDesc"
+                        android:textSize="@dimen/textmedium"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray"
+                        android:layout_marginLeft="120dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvOldDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_below="@+id/rlDesc"
+                    android:id="@+id/rlUpdatedAddress"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvUpdatedAddress"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/updated_addresses"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ListView
+                        android:id="@+id/lvUpdatedAddress"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvUpdatedAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/lvUpdatedAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_below="@+id/rlUpdatedAddress"
+                    android:id="@+id/rlNewAddress"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNewAddress"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/new_addresses"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ListView
+                        android:id="@+id/lvNewAddress"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvNewAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/lvNewAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/rlNewAddress"
+                    android:id="@+id/rlDeletedAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvDeletedAddress"
+                        android:textSize="@dimen/textmedium"
+                        android:singleLine="true"
+                        android:text="@string/deleted_addresses"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ListView
+                        android:id="@+id/lvDeletedAddress"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tvDeletedAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/lvDeletedAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/green_box_bg" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

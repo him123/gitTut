@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/rlBack"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/expense_details"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_below="@id/header"
+        android:orientation="vertical">
+        <!--Raw 9 Assigned to-->
+        <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+            <TextView
+                style="@style/viewworkitem_textviewstyle1"
+                android:text="@string/name" />
+
+            <TextView style="@style/viewworkitem_textviewstyle2" />
+
+            <TextView
+                android:id="@+id/tv_itemName"
+                style="@style/viewworkitem_textviewstyle3" />
+        </LinearLayout>
+
+        <View style="@style/seperator_view" />
+        <!--Raw 10 type of work-->
+        <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+            <TextView
+                style="@style/viewworkitem_textviewstyle1"
+                android:text="@string/budget" />
+
+            <TextView style="@style/viewworkitem_textviewstyle2" />
+
+            <TextView
+                android:id="@+id/tv_itemBudget"
+                style="@style/viewworkitem_textviewstyle3" />
+        </LinearLayout>
+
+        <View style="@style/seperator_view" />
+
+        <ListView
+            android:id="@+id/lv_expense"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green_btn"
+        android:orientation="vertical">
+        <!--Raw 9 Assigned to-->
+        <LinearLayout style="@style/viewworkitem_linearLayoutStyle">
+
+            <TextView
+                style="@style/viewworkitem_textviewstyle1"
+                android:text="@string/total"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/viewworkitem_textviewstyle2"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_itemTotal"
+                style="@style/viewworkitem_textviewstyle3"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

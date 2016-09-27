@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:text="@string/work_location"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_back"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAttendance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/large_margin"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/linearLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeTime"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/location"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium" />
+
+                <Spinner
+                    android:id="@+id/spnrLocation"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:entries="@array/location_type"
+                    android:padding="@dimen/small_margin"
+                    android:prompt="@string/select_location"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_vendorlocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLocation"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvClientVendorTitle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vendor_client"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_sp_select"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinner_vendorlocation"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:padding="@dimen/small_margin"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_AddressList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_vendorlocation"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/address"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textmedium" />
+
+                <Spinner
+                    android:id="@+id/spinner_addressList"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:padding="@dimen/small_margin"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSetAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_below="@+id/linear_AddressList"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rectangle_blue"
+                android:text="@string/save_update"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textmedium" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

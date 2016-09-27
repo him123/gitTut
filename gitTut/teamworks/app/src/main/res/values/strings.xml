@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SuperTeam</string>
+    <string name="register">REGISTER</string>
+    <string name="register_">Register</string>
+    <string name="username">USERNAME</string>
+    <string name="mob">MOBILE</string>
+    <string name="password">PASSWORD</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">Logout</string>
+    <string name="search">SEARCH</string>
+    <string name="register_text">Not a registered user?</string>
+    <string name="signup">SIGN UP NOW</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="forgot_password_">Forgot Password</string>
+    <string name="company_invitation">Company Invitation</string>
+    <string name="reset">RESET</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">SETTINGS</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <!-- Register -->
+    <string name="verify_mobile">Verify Mobile</string>
+    <string name="enter_code">Enter code</string>
+    <string name="admin_setup">ADMIN SETUP</string>
+    <string name="company_setup">Create Company</string>
+    <string name="attendance_setup">Attendance</string>
+    <string name="leave_setup">Leaves</string>
+    <string name="holidays">Holidays</string>
+    <string name="leaves">Leaves</string>
+    <string name="payroll_setup">Payroll</string>
+    <string name="roles_rights_setup">Roles &amp; Rights</string>
+    <string name="advance_settings">ADVANCE SETTINGS</string>
+    <string name="verify">VERIFY</string>
+    <string name="re_generate">RESEND CODE</string>
+    <string name="salary_type">SALARY TYPE</string>
+    <string name="flat">FLAT</string>
+    <string name="breakup">BREAKUP</string>
+    <string name="holiday_setup">Holidays</string>
+
+    <!-- User Setup -->
+    <string name="fname">FIRST NAME</string>
+    <string name="lname">LAST NAME</string>
+    <string name="add1">ADDRESS 1</string>
+    <string name="add2">ADDRESS 2</string>
+    <string name="city">CITY</string>
+    <string name="state">STATE</string>
+    <string name="country">COUNTRY</string>
+    <string name="pincode">PINCODE</string>
+    <string name="photo">PHOTO</string>
+    <string name="resign_reason">Why do you want to resign from the company?</string>
+    <string name="exising">EXISTING</string>
+    <string name="invited">INVITED</string>
+    <string name="resend">RESEND</string>
+
+    <!-- Company Setup -->
+    <string name="company_name">COMPANY NAME</string>
+    <string name="company_mobile">COMPANY MOBILE</string>
+    <string name="company_landline">COMPANY LANDLINE</string>
+    <string name="company_email">COMPANY EMAIL</string>
+    <string name="company_desc">COMPANY DESCRIPTION</string>
+    <string name="logo">LOGO</string>
+    <string name="next">NEXT</string>
+    <string name="back">BACK</string>
+    <string name="skip">SKIP</string>
+    <string name="spinner_segment">SEGMENT</string>
+
+    <string-array name="segment_array">
+        <item>Segment1</item>
+        <item>Segment2</item>
+        <item>Segment3</item>
+        <item>Segment4</item>
+        <item>Segment5</item>
+    </string-array>
+
+    <string-array name="leaves_array">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Annual</item>
+    </string-array>
+
+    <string name="include_payroll">Include Payroll</string>
+    <string name="toggle_turn_on">ON</string>
+    <string name="toggle_turn_off">OFF</string>
+
+    <!-- Client & Vendor -->
+    <string name="clients">Customers</string>
+    <string name="vendors">Vendors</string>
+    <string name="add_client">Add Customer</string>
+    <string name="add_vendor">Add Vendor</string>
+    <string name="update_client">Update Customer</string>
+    <string name="update_vendor">Update Vendor</string>
+    <string name="company_type">Company Type</string>
+    <string name="client_type">TYPE</string>
+    <string name="vendor_type">Vendor Type</string>
+    <string name="address_type">Address Type</string>
+    <string name="permanent_address">PERMANENT ADDRESS</string>
+    <string name="pick_pos">Pick position on map</string>
+    <string name="add_location">Add Location</string>
+    <string name="update_location">Update Location</string>
+    <string name="no_client">You\'ve not added any customer yet</string>
+    <string name="no_vendor">You\'ve not added any vendor yet</string>
+    <string name="client_description">A customer is a person/org who uses your services.</string>
+    <string name="vendor_description">A vendor is a person/org who uses your services.</string>
+    <string name="client_vendor_address">Saved Location</string>
+    <string name="no_location_saved">No location is saved yet!!!!</string>
+    <string name="location_approval">Location Approval Details</string>
+
+    <string-array name="address_type_array">
+        <item>Temporary</item>
+        <item>Residential</item>
+        <item>Factory</item>
+    </string-array>
+    <string-array name="company_type_array">
+        <item>Trading</item>
+        <item>Manufacturing</item>
+        <item>Service</item>
+    </string-array>
+
+    <string name="client_name">NAME</string>
+    <string name="client_mobile">MOBILE</string>
+    <string name="client_landline">LANDLINE</string>
+    <string name="client_email">EMAIL</string>
+    <string name="client_desc">DESCRIPTION</string>
+    <string name="vendor_name">Vendor Name</string>
+    <string name="updated_addresses">Updated Addresses</string>
+    <string name="new_addresses">New Addresses</string>
+    <string name="deleted_addresses">Deleted Addresses</string>
+    <string name="old_address">Old Address</string>
+    <string name="new_address">New Address</string>
+
+    <!-- Attandance & Leave Setup -->
+    <string name="working_days">WORKING DAYS</string>
+    <string name="working_hours">COMPANY TIME</string>
+    <string name="mon">M</string>
+    <string name="tue">T</string>
+    <string name="wed">W</string>
+    <string name="thu">T</string>
+    <string name="fri">F</string>
+    <string name="sat">S</string>
+    <string name="sun">S</string>
+    <string name="start_time">START TIME</string>
+    <string name="end_time">END TIME</string>
+    <string name="late_coming">Late Entry Deductions</string>
+    <string name="auto_leave_update">Enable automatic leave update</string>
+    <string name="deducutionHour1">1 HOUR LATE</string>
+    <string name="deducutionHour2">2 HOURS LATE</string>
+    <string name="deducutionHour3">3 HOURS LATE</string>
+    <string name="deducutionHour4">4 HOURS LATE</string>
+    <string name="deducutionHour4On">4 HOURS ONWARDS</string>
+    <string name="deducution_per">%</string>
+    <string name="holiday_list">HOLIDAY LIST</string>
+    <string name="update">UPDATE</string>
+    <string name="withraw">WITHDRAW</string>
+    <string name="title_activity_select_holiday">SelectHolidayActivity</string>
+    <string name="select_holiday">Select Holiday</string>
+    <string name="add_custom_holiday">Add Custom Holiday</string>
+    <string name="enter_leave_type">Enter Leave Type</string>
+    <string name="date_">Date:</string>
+    <string name="attendance_details">Attendance Details</string>
+    <string name="sick_leave">SICK LEAVE</string>
+    <string name="casual_leave">CASUAL LEAVE</string>
+    <string name="paid_leave">PAID LEAVE</string>
+    <string name="optional_leave">OPTIONAL LEAVE</string>
+    <string name="leave_history">Leave History</string>
+    <string name="tracking_time">TRACKING TIME</string>
+    <string name="minimum_daily_working_hrs">Minimum Daily Working Hours</string>
+    <string name="average_working_working_hour">Average Working Hours</string>
+    <string name="saturday_working_policy">Saturday Working Policy</string>
+    <string name="saturday1">Saturday 1</string>
+    <string name="saturday2">Saturday 2</string>
+    <string name="saturday3">Saturday 3</string>
+    <string name="saturday4">Saturday 4</string>
+    <string name="saturday5">Saturday 5</string>
+
+    <string-array name="location_type">
+        <item>Office</item>
+        <item>Vendor</item>
+        <item>Customer</item>
+    </string-array>
+    <string-array name="manualAttendance_type">
+        <item>Full Day</item>
+        <item>Half Day</item>
+    </string-array>
+
+    <string name="manualattendance">Manual Attendance</string>
+    <string name="leavetype">Leave Type</string>
+    <string name="checkintime">Check-In Time</string>
+    <string name="checkouttime">Check-Out Time</string>
+    <string name="reason">Reason</string>
+    <string name="startdate">Start Date</string>
+    <string name="enddate">End Date</string>
+    <string name="attendancehistory">Attendance History</string>
+    <string name="select_attendance_type">Select Type</string>
+    <string name="leave_detail">Leave Details</string>
+    <string name="leave_withdraw">Withdraw</string>
+    <string name="total_leaves">Total Leaves</string>
+    <string name="available_leaves">Available Leaves</string>
+    <string name="used_leaves">Used leaves</string>
+    <string name="update_time">Update Time Details</string>
+    <string name="oldtime_in">Old In</string>
+    <string name="oldtime_out">Old Out</string>
+    <string name="newtime_in">New In</string>
+    <string name="newtime_out">New Out</string>
+    <string name="export_csv">Export to Excel</string>
+    <string name="export_pdf">Export to PDF</string>
+    <string name="select_vendor">Select Vendor/Customer</string>
+    <string name="select_address">Select Address</string>
+    <string name="vendor_client">CUSTOMER/VENDOR</string>
+    <string name="updated_location">Updated Location</string>
+    <string name="location">LOCATION</string>
+    <string name="save_location">Save</string>
+    <string name="work_location">Work Location</string>
+    <string name="time_in">IN</string>
+    <string name="time_out">OUT</string>
+    <string name="no_leave_applied">No leave has been applied yet!!!</string>
+    <string name="manual_request">MANUAL REQUEST</string>
+    <string name="time">TIME</string>
+    <string name="always_allow">Always allow attendance from here</string>
+    <string name="check_in">CHECK-IN</string>
+    <string name="check_out">CHECK-OUT</string>
+    <string name="from_date">FROM</string>
+    <string name="till_date">TILL</string>
+    <string name="full_day">Full Day</string>
+    <string name="half_day">Half Day</string>
+    <string name="leave_type">TYPE</string>
+    <string name="update_balance">UPDATE LEAVE BALANCE</string>
+
+    <string-array name="leave_types">
+        <item>Sick Leave</item>
+        <item>Casual Leave</item>
+        <item>Paid Leave</item>
+        <item>Optional Leave</item>
+    </string-array>
+
+    <!-- Payroll Setup -->
+    <string name="allowances">Allowances</string>
+    <string name="of_ctc">% of CTC</string>
+    <string name="of_basic">% of Basic</string>
+    <string name="conveyance">Conveyance</string>
+    <string name="rs">Rs.</string>
+    <string name="rs_per_month">Rs. per Month</string>
+    <string name="rs_per_annum">Rs. per Annum</string>
+    <string name="medical">Medical</string>
+    <string name="telephone">Telephone</string>
+    <string name="lta">LTA</string>
+    <string name="special_incentives">Special Incentives</string>
+    <string name="other_allowances">Other Allowances</string>
+    <string name="pf">PF</string>
+    <string name="employee_contribution">Employee Contribution</string>
+    <string name="employer_contribution">Employer Contribution</string>
+    <string name="professional_tax">Professional Tax</string>
+    <string name="income_tax">Income Tax</string>
+    <string name="maintain_tds">Maintain TDS</string>
+    <string name="other_deductions">Other Deductions</string>
+    <string name="deductions">Deductions</string>
+    <string name="user_detail">User Detail</string>
+    <string name="bank_detail">Bank Detail</string>
+    <string name="working_policy">Working Policy</string>
+    <string name="one_hrs_deduction">Late/Early 1 Hour Deduction</string>
+    <string name="two_hrs_deduction">Late/Early 2 Hours Deduction</string>
+    <string name="three_hrs_deduction">Late/Early 3 Hours Deduction</string>
+    <string name="four_hrs_deduction">Late/Early 4 Hours Deduction</string>
+    <string name="five_hrs_deduction">Late/Early 5 Hours Deduction</string>
+    <string name="percentage">%</string>
+    <string name="late_allowed_time">Late Allowed Time</string>
+    <string name="per_hrs">per hour</string>
+    <string name="hrs_cal_type">Hours Calculation Type</string>
+    <string name="employee_code">Employee Code</string>
+    <string name="pf_act_no">PF Account Number</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="pan_no">PAN Number</string>
+    <string name="bank_act_no">Bank Account Number</string>
+    <string name="investment">Investments</string>
+    <string name="actual_rent">Actual Rent Paid</string>
+    <string name="investment_80c">Investment Under 80C [excluding PF]</string>
+    <string name="investment_80d">Other Exemptions</string>
+    <string name="ctc_rs">CTC (Rs)</string>
+    <string name="basic_sal">Basic Salary</string>
+    <string name="medical_allo">Medical Allowances</string>
+    <string name="variable_amt">Variable Pay Amount</string>
+    <string name="variable_amount">Variable Amount</string>
+    <string name="mertocity">Metro City</string>
+    <string name="working_day_policy">Working Days Policy</string>
+    <string name="update_user_payroll">UPDATE USER PAYROLL</string>
+    <string name="metrocity_text">* HRA tax exemptions \n For metrocity 50% \n For non metrocity 40%</string>
+    <string name="gross_earnings">Gross Earnings</string>
+    <string name="total_working_day">Total Working Days</string>
+    <string name="total_Present_days">Total Paid Days</string>
+    <string name="total_leave_taken">Total Leave Taken</string>
+    <string name="pf_employee_con">PF Employee Contribution</string>
+    <string name="leave_deduction">Extra Leave</string>
+    <string name="tds">TDS</string>
+    <string name="short_deduction">Short Hours</string>
+    <string name="gross_deduction">Gross Deduction</string>
+    <string name="net_salary">Net Salary</string>
+    <string name="late_hrs_policy_text">* Number of times user allowed to come late/go early for 1 hour</string>
+
+    <string-array name="working_day_policy">
+        <item>Total Month Days</item>
+        <item>Monthly Working Days</item>
+    </string-array>
+
+    <string-array name="working_policy">
+        <item>Late coming/Early going Policy</item>
+        <item>Minimum Average Hours Policy</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="hours_calculation_type">
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+
+    <!-- Roles & Rights Setup -->
+    <string name="manager_">MANAGER</string>
+    <string name="team_member">TEAM MEMBER</string>
+    <string name="manager_rights">Manager Rights</string>
+    <string name="update_start_end_time">Update start/end time of Team Members?</string>
+    <string name="approve_leave_request">Approve leave request of Team Member?</string>
+    <string name="approve_manal_attandance">Approve manual attandance of Team Member?</string>
+    <string name="track_team_members">Track Team Members?</string>
+    <string name="update_new_location">Update new location details?</string>
+    <string name="approve_new_location">Approve new location details?</string>
+    <string name="disable_tracking">Disable tracking during work hours?</string>
+    <string name="approve_new_projects">Approve new projects?</string>
+    <string name="approve_new_workitems">Approve new tasks??</string>
+    <string name="approve_work_items_updates">Approve task updates?</string>
+    <string name="close_project">Close project?</string>
+    <string name="close_work_item">Close task?</string>
+    <string name="reopen_project">Reopen project?</string>
+    <string name="reopen_workitem">Reopen task</string>
+    <string name="require_project_approval">Require approval for new project?</string>
+    <string name="require_workitem_approval">Require approval for new task?</string>
+    <string name="view_team_memeber_performance">View team member performance?</string>
+    <string name="view_team_memeber_load_factor">View team member load factor?</string>
+    <string name="team_member_rights">Team Member Rights</string>
+    <string name="require_approval_new_workitem">Require approval for new task?</string>
+    <string name="require_approval_workitem_update">Require approval for task update?</string>
+    <string name="apply_manual_attandance">Apply for manual attandance</string>
+    <string name="complete_setup">Complete Setup</string>
+    <string name="title_activity_dashboard_user">DashboardUserActivity</string>
+    <string name="image_size_exceeds_limit">Maximum upload size of 1 mb exceeded. Please select a file with lower size</string>
+    <string name="file_not_supported">file does not supported</string>
+
+    <!-- Common -->
+    <string name="submit">SUBMIT</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="cancel_">CANCEL</string>
+    <string name="apply">Apply</string>
+    <string name="datetimeformat">DD:MM:YY HH:MM</string>
+    <string name="dateformat">DD:MM:YY</string>
+    <string name="leave">Leaves</string>
+    <string name="settings">Settings</string>
+    <string name="submit_resignation">SUBMIT RESIGNATION</string>
+    <string name="add_holiday">Add Holiday</string>
+    <string name="update_holiday">Update Holiday</string>
+
+    <!-- User Dash Boards -->
+    <string name="One">1</string>
+    <string name="Two">2</string>
+    <string name="Three">3</string>
+    <string name="Four">4</string>
+    <string name="Five">5</string>
+
+    <!-- Attendance Fragment -->
+    <string name="Attendance">ATTENDANCE</string>
+    <string name="Leave">Leaves</string>
+    <string name="checkin">CHECK-IN</string>
+    <string name="checkout">CHECK-OUT</string>
+    <string name="manualrequest">Manual Request</string>
+    <string name="history">HISTORY</string>
+    <string name="applyforleave">Apply for Leave</string>
+    <string name="leavestatus">LEAVE STATUS</string>
+    <string name="leavebalance">Leave Balance</string>
+    <string name="type">Attendance</string>
+    <string name="leave_cancel">Reject</string>
+    <string name="leave_accept">Accept</string>
+
+    <!-- Work items Fragment -->
+    <string name="tasks">Tasks</string>
+    <string name="createworkitem">Create task</string>
+    <string name="create_task">Create a task</string>
+    <string name="title">TITLE</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="project">Project</string>
+    <string name="priority">PRIORITY</string>
+    <string name="attachments">Attachments</string>
+    <string name="worklocation">WORK LOCATION</string>
+    <string name="starttime">START TIME</string>
+    <string name="endtime">END TIME</string>
+    <string name="starting_from">STARTING FROM</string>
+    <string name="ends_by">ENDS BY</string>
+    <string name="project_starting_from">PROJECT STARTING FROM</string>
+    <string name="project_ends_by">PROJECT ENDS BY</string>
+    <string name="estimate_work">ESTIMATED (hh:mm)</string>
+    <string name="new_call">New Call</string>
+    <string name="if_others">If Other then Specify</string>
+    <string name="enter_customer_name">Enter Customer Name</string>
+    <string name="Time_Out_Work_Item">Task Time Out</string>
+    <string name="assign_to">ASSIGN TO</string>
+    <string name="query_to">QUERY TO</string>
+    <string name="delegate_to">DELEGATE TO</string>
+    <string name="cclist">CC List</string>
+    <string name="assigned_to">ASSIGNED TO</string>
+    <string name="before_workItem">Item Need to Completed before Starting</string>
+    <string name="after_workitem">Item Need to Started After Completing</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_contact">Customer Contact</string>
+    <string name="new_customer">New Customer</string>
+    <string name="repeat_call">Repeat Call</string>
+    <string name="past_history">Past History</string>
+    <string name="invoice_amount">INVOICE AMOUNT</string>
+    <string name="invoice_date">INVOICE DATE</string>
+    <string name="due_date">DUE DATE</string>
+    <string name="preferred">Preferred</string>
+    <string name="mandatory">Mandatory</string>
+    <string name="enter_names_saparated_by_comma">Enter Vendor Names Separated by Comma</string>
+    <string name="advance_paid">ADVANCE PAID</string>
+    <string name="outstanding_amount">OUTSTANDING AMOUNT</string>
+    <string name="project_realted_work">Project Related Task</string>
+    <string name="individual_work">Individual task</string>
+    <string name="onetime">One Time</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="hrs">Hrs.</string>
+    <string name="mins">Mins.</string>
+    <string name="depent_workItems">DEPENDENT TASK</string>
+    <string name="depent_workItems_">Dependent Task</string>
+    <string name="expense_details">Expense Details</string>
+    <string name="total">Total</string>
+    <string name="edit">Edit</string>
+    <string name="editworkitem">Edit task</string>
+    <string name="select_days_for_this_work_item">Select Days for This task</string>
+    <string name="select_days">Day</string>
+    <string name="no_projects_available_to_select">No Projects Available to Select</string>
+    <string name="fetching_address">Fetching Address :) </string>
+    <string name="no_workitem_to_select">No task to Select</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_form_library">Choose from Library</string>
+    <string name="add_photo">Add Photo!</string>
+    <string name="check_start_and_end_time">Check Start and End Time</string>
+    <string name="postpone_start_date">Start date cannot be less then Task Start Date</string>
+    <string name="assing_work_item">Assign task</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="reselect_date_and_time">Reselect Date and Time</string>
+    <string name="updating_workitem">Updating task :)</string>
+    <string name="contact_adming_to_edit_this_work">Contact Admin to Edit this Task</string>
+    <string name="enter_start_date">Enter Start Date</string>
+    <string name="enter_end_date">Enter End Date</string>
+    <string name="select_assignees">Select Assignees</string>
+    <string name="select_amount">Select Amount</string>
+    <string name="select_expense_description">Select Expence Description</string>
+    <string name="select_invoice_date">Select Invoice Date</string>
+    <string name="work_item_needs_activation">Task needs Activation</string>
+    <string name="work_item_already_done">Task is already done</string>
+    <string name="work_item_done_request_on_progress">Task Done request on progress</string>
+    <string name="completed_work_items">Completed tasks</string>
+    <string name="work_item_is_offline">Item pending Upload.</string>
+    <string name="project_not_created">Project Not Created Due to Error</string>
+    <string name="no_item_presents">No Items Present</string>
+    <string name="downloading_attachment">Downloading Attachment</string>
+    <string name="me">Me</string>
+    <string name="postponed_new_dates_are">Postponed: New Dates are </string>
+    <string name="postponed_new_times_are">Postponed: New Times are </string>
+    <string name="delegate">Delegate</string>
+    <string name="occured_for">" occurred for "</string>
+    <string name="for_">" for "</string>
+    <string name="On">" on"</string>
+    <string name="assign_to_compulsary">Assign To (*)</string>
+    <string name="title_compulsary">Title (*)</string>
+    <string name="description_compulsary">Description (*)</string>
+    <string name="select_vendors">Select Vendors</string>
+    <string name="stop_recording_before_exit">Stop Recording before Exit</string>
+    <string name="are_you_sure_you_want_to_delete_this_item">Are you sure you want to delete this entry?</string>
+    <string name="delete_item">Delete Item</string>
+    <string name="reopen">Re-open</string>
+    <string name="error_in_uploading_data">Error in Uploading Data</string>
+    <string name="workupdate_inserted">Task Update Inserted</string>
+    <string name="less_than_one_hr_remains">Less than One Hour Remaining</string>
+    <string name="Re_opening_work_item">Re-Opening task</string>
+    <string name="select_customer">Add Customer Name</string>
+    <string name="delegated">Delegated</string>
+    <string name="expand">Expand</string>
+    <string name="collepse">Collapse</string>
+    <string name="query">Query</string>
+    <string name="max_minute_size_60">Maximum Minute Must be 60</string>
+    <string name="title_length_should_be_minimum_of_three_chars">Name should be minimum of three characters</string>
+    <string name="description_length_should_be_minimum_of_three_chars">Description should be minimum of three characters</string>
+    <string name="project_modification_request_submitted">Project Modification Request Submitted</string>
+    <string name="voice_record_limit_1_min">Voice Recording Limit: 1 Min</string>
+    <string name="work_item_modification_request_submitted">Task Modification Request Submitted</string>
+    <string name="hours_must_be_les_than_working_hours">Hours must be less than working hours in regular task</string>
+    <string name="end_time_should_greater_then_start">End time should be greater than start time</string>
+    <string name="end_time_should_greater_then_current">End time should be greater than Current time</string>
+    <string name="check_proj_start_date">Task starting date should be after project start date</string>
+    <string name="check_proj_end_date">Task ending date should be before project end date</string>
+    <string name="timeformat">HH:MM</string>
+    <string name="updated_by">UPDATED BY</string>
+    <string name="edited_by">EDITED BY</string>
+    <string name="due_time_should_greater_then_invoice">Due Date should be greater than Invoice Date</string>
+    <string name="invoice_should_less">Invoice Date should be less than Due Date</string>
+    <string name="workitem_update_has_been_sent_for_approval">Task update has been sent for approval</string>
+    <string name="approval_required_for_new_project">Approval Required for New Project</string>
+    <string name="approval_required_for_workitem_modification">Approval Required for task Modification</string>
+    <string name="work_item_modification">Task Modification</string>
+    <string name="project_modification">Project Modification</string>
+    <string name="approval_required_for_project_modification">Approval required for Project Modification</string>
+    <string name="approval_required_for_workitem_update">Approval required for task Update</string>
+    <string name="update_for_work_item">Update for task</string>
+    <string name="no_application_available_to_open_this_file">No Application available to open this File</string>
+    <string name="active">ACTIVE</string>
+    <string name="archived">ARCHIVED</string>
+    <string name="pending_">PENDING</string>
+    <string name="no_active">No active task</string>
+    <string name="no_archived">No archived task</string>
+    <string name="no_pending">No pending task</string>
+    <string name="task_details">DETAILS</string>
+    <string name="task_attachments">ATTACHMENTS</string>
+    <string name="task_address">ADDRESS</string>
+    <string name="upload_file">Upload File</string>
+    <string name="gallery">Gallery</string>
+    <string name="add_note">Add a note...</string>
+    <string name="no_project">No project</string>
+    <string name="project_modified">Project has been modified</string>
+    <string name="select_day_for_regulartask">Please select a day for regular task</string>
+    <string name="task_type">TASK TYPE</string>
+    <string name="vendor_">VENDOR</string>
+    <string name="file_supported">FILE SUPPORTED</string>
+    <string name="file_types">jpg, jpeg, png, gif, bmp, mp3, wav, ogg, x-ogg, mid, midi, AMR, mpeg, 3gpp, mkv, mp4, pdf, txt, csv, xml, html</string>
+
+    <string-array name="work_types">
+        <item name="project"> "Project"</item>
+        <item name="regular">"Regular"</item>
+        <item name="one_time"> "One Time"</item>
+        <item name="service_call">"Service Call"</item>
+        <item name="sales_call">"Sales Call"</item>
+        <item name="shopping/purchase">"Shopping/Purchase"</item>
+        <item name="collection">"Collection"</item>
+    </string-array>
+    <string-array name="week_days">
+        <item name="sunday">"Sunday</item>
+        <item name="monday">"Monday</item>
+        <item name="tuesday">"Tuesday</item>
+        <item name="wednesday">"Wednesday</item>
+        <item name="thursday">"Thursday</item>
+        <item name="friday">"Friday</item>
+        <item name="saturday">"Saturday</item>
+    </string-array>
+
+    <!-- Projects -->
+    <string name="select_image_for_project">Select Image for Project</string>
+    <string name="download">Download</string>
+    <string name="open">Open</string>
+    <string name="owner">OWNER</string>
+    <string name="select_owner">Select Owner</string>
+    <string name="select_workitem">Select Dependency</string>
+
+    <!-- Others Menu -->
+    <string name="others">Others</string>
+    <string name="assignwork">Assign Task</string>
+    <string name="notification">Notification</string>
+    <string name="payroll">Payroll</string>
+    <string name="expenses">Expenses</string>
+    <string name="profile">Profile</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="change_mobile">Change Mobile</string>
+    <string name="change_password">Change Password</string>
+    <string name="your_managers">Your Managers</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="reset_password_">Reset Password</string>
+    <string name="update_role">Update Role &amp; Manager</string>
+    <string name="current_role">User\'s current Role &amp; Manager:</string>
+    <string name="resignation">Resignation</string>
+    <string name="resignation_title">Your resignation will be sent for approval</string>
+    <string name="resignation_note">Resignation Note</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="view_photo">View Photo</string>
+    <string name="delete_photo">Delete Photo</string>
+    <string name="old_mobile">OLD NO.</string>
+    <string name="new_mobile">NEW NO.</string>
+    <string name="save">SAVE</string>
+    <string name="save_update">SAVE &amp; UPDATE</string>
+    <string name="delete">Delete</string>
+    <string name="add_address">Add Address</string>
+    <string name="old_password">OLD PASSWORD</string>
+    <string name="update_comapny">UPDATE COMPANY</string>
+    <string name="delete_company">DELETE COMPANY</string>
+    <string name="delete_holiday">DELETE HOLIDAY</string>
+    <string name="generate">GENERATE</string>
+    <string name="late_coming_policy">Late Coming Policy</string>
+
+    <string-array name="other_menu_array">
+        <item>USER SETTINGS</item>
+        <item>User Profile</item>
+        <item>Tracking History</item>
+        <item>Update Work Location</item>
+        <item>Change Mobile</item>
+        <item>Change Password</item>
+        <item>Your Managers</item>
+        <item>Invitations</item>
+        <item>Resign</item>
+        <item>COMPANY SETTINGS</item>
+        <item>Company Profile</item>
+        <item>Attendance</item>
+        <item>Holidays</item>
+        <item>Leaves</item>
+        <item>Customers &amp; Vendors</item>
+        <item />
+        <item>Logout</item>
+    </string-array>
+
+    <!-- Payroll Activity -->
+    <string name="viewpayrollreport">View Payroll Report</string>
+    <string name="runpayroll">Run Payroll</string>
+    <string name="userPayroll">User Payroll</string>
+
+    <!-- Admin Dashboard -->
+    <string name="admin_panel">Admin Panel</string>
+    <string name="work_items">Tasks</string>
+    <string name="approvals">Approvals</string>
+    <string name="notifications">Notifications</string>
+    <string name="users">Users</string>
+    <string name="attendance_history">Attendance &amp; Leave History</string>
+    <string name="attendance_leave">Attendance &amp; Leaves</string>
+    <string name="workitem_history">Task History</string>
+    <string name="projects">Projects</string>
+    <string name="analytics">analytics</string>
+    <string name="export">Export</string>
+    <string name="payslip">Pay Slip</string>
+    <string name="view_payslip">View Pay Slip</string>
+
+    <!-- Admin WorkItem -->
+    <string name="work_item">Task</string>
+    <string name="frequency">Frequency</string>
+    <string name="days">Days</string>
+    <string name="customer_type">Customer Type</string>
+    <string name="vensor_selection">Vendor Selection</string>
+    <string name="tasks_before_this_item">Tasks Need to Complete Before This task</string>
+    <string name="tasks_after_this_item">Tasks Need to Complete After This task</string>
+    <string name="createdby">CREATED BY</string>
+    <string name="uploading_data">Uploading Data</string>
+
+    <!-- General Raw Attributes -->
+    <string name="item_name">Item Name</string>
+    <!-- Update Work -->
+    <string name="record">record</string>
+    <string name="image">Image</string>
+    <string name="send">Send</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="done">Done</string>
+    <string name="done_">DONE</string>
+    <string name="select_users">Select Users</string>
+
+    <!-- Approval -->
+    <string name="accept">APPROVE</string>
+    <string name="reject">REJECT</string>
+    <string name="date">DATE</string>
+    <string name="approval_details">Approval Details</string>
+    <string name="approval_type">Approval Type</string>
+    <string name="notification_details">Notification Details</string>
+
+    <!-- Update Types -->
+    <string name="pending">Pending</string>
+    <string name="rejected">Rejected</string>
+
+    <!-- User Raw -->
+    <string name="name">Name</string>
+    <string name="designation">Designation</string>
+    <string name="phone">Phone:</string>
+    <string name="landline_no">Landline No</string>
+    <string name="select_image">Select Image</string>
+    <string name="address">ADDRESS</string>
+    <string name="client_addresses">ADDRESSES</string>
+    <string name="vendor_addresses">ADDRESSES</string>
+    <string name="company_addresses">ADDRESSES</string>
+
+    <!-- Add User -->
+    <string name="add_user">Add User</string>
+    <string name="invite_user">Invite User</string>
+    <string name="add">Add</string>
+    <string name="submit_invitation">SEND INVITATION</string>
+    <string name="mobile_no">Mobile</string>
+    <string name="email_id">EMAIL</string>
+    <string name="user_id">User Id</string>
+    <string name="new_password">NEW PASSWORD</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="user_info">User Info</string>
+    <string name="employee">Employee</string>
+    <string name="manager">MANAGER</string>
+    <string name="remove_user">Remove User</string>
+    <string name="role">ROLE</string>
+
+    <string-array name="role_array">
+        <item>Admin</item>
+        <item>Manager</item>
+        <item>Team Member</item>
+    </string-array>
+
+    <!-- Salary Components -->
+    <string name="ctc">CTC</string>
+    <string name="basic_salary">Basic Salary</string>
+    <string name="hra">HRA</string>
+    <string name="net_pay">Net Pay</string>
+    <string name="employer">Employer</string>
+    <string name="p_tax">P. Tax</string>
+    <string name="payroll_enable">Payroll Enable</string>
+    <string name="delete_user">DELETE USER</string>
+    <string name="assign_work_to">Assign Task To</string>
+    <string name="create_project">Create a Project</string>
+    <string name="update_project">Update Project</string>
+    <string name="delete_project">Delete Project</string>
+    <string name="gantt_chart">Gantt chart</string>
+    <string name="company_profile">Company Profile</string>
+    <string name="user_accounts">User Accounts</string>
+    <string name="locations">Locations</string>
+    <string name="reports">Reports</string>
+    <string name="approved">Approved</string>
+    <string name="view">View</string>
+    <string name="pay_slip">Pay Slip</string>
+    <string name="emp_id">Emp Id</string>
+    <string name="DOJ">DOJ</string>
+    <string name="emp_name">Emp Name</string>
+    <string name="pf_ac">PF A/c</string>
+    <string name="earned_leave">Earned Leave</string>
+    <string name="bank_ac">Bank A/c</string>
+    <string name="earnings">Earnings</string>
+    <string name="amount">AMOUNT</string>
+    <string name="special_allow">Special Allowances</string>
+
+    <!-- SuperAdmin Settings -->
+    <string-array name="superadmin_settings_array">
+        <item>USER SETTINGS</item>
+        <item>User Profile</item>
+        <item>Change Mobile</item>
+        <item>Change Password</item>
+        <item>Invitations</item>
+        <item>COMPANY SETTINGS</item>
+        <item>Company Profile</item>
+        <item>Attendance</item>
+        <item>Holidays</item>
+        <item>Leaves</item>
+        <item>Payroll</item>
+        <item>Roles &amp; Rights</item>
+        <item>Customers &amp; Vendors</item>
+        <item>Users</item>
+        <item />
+        <item>Logout</item>
+    </string-array>
+
+    <!-- Admin Settings -->
+    <string-array name="admin_settings_array">
+        <item>USER SETTINGS</item>
+        <item>User Profile</item>
+        <item>Change Mobile</item>
+        <item>Change Password</item>
+        <item>Your Managers</item>
+        <item>Invitations</item>
+        <item>Resign</item>
+        <item>COMPANY SETTINGS</item>
+        <item>Company Profile</item>
+        <item>Attendance</item>
+        <item>Holidays</item>
+        <item>Leaves</item>
+        <item>Payroll</item>
+        <item>Roles &amp; Rights</item>
+        <item>Customers &amp; Vendors</item>
+        <item>Users</item>
+        <item />
+        <item>Logout</item>
+    </string-array>
+
+    <!-- Manager Settings -->
+    <string-array name="manager_settings_array">
+        <item>USER SETTINGS</item>
+        <item>User Profile</item>
+        <item>Tracking History</item>
+        <item>Update Work Location</item>
+        <item>Change Mobile</item>
+        <item>Change Password</item>
+        <item>Your Managers</item>
+        <item>Invitations</item>
+        <item>Resign</item>
+        <item>COMPANY SETTINGS</item>
+        <item>Company Profile</item>
+        <item>Attendance</item>
+        <item>Holidays</item>
+        <item>Leaves</item>
+        <item>Customers &amp; Vendors</item>
+        <item />
+        <item>Logout</item>
+    </string-array>
+
+    <!-- Tracking -->
+    <string name="tracking">Tracking</string>
+    <string name="current_location">Current Location</string>
+    <string name="set_time_period">Set Time Period</string>
+    <string name="change_date">Change Date</string>
+    <string name="view_map_only">View Map Only</string>
+    <string name="view_List_only">View List Only</string>
+    <string name="view_both">View Both</string>
+    <string name="select_time_period">Select One Time Period</string>
+
+    <string-array name="time_period_array">
+        <item>now</item>
+        <item>15 min</item>
+        <item>30 min</item>
+        <item>1 hour</item>
+    </string-array>
+
+    <string name="daily_report">Daily Report</string>
+    <string name="prompt_day">Day</string>
+
+    <string-array name="day_array">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string name="prompt_month">Month</string>
+
+    <string-array name="month_array">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <integer-array name="year_array_int">
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </integer-array>
+
+    <string name="prompt_year">Year</string>
+    <string name="select_location">Select Location</string>
+    <string name="filter_tasks">Filter Tasks</string>
+    <string name="dailly">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="cc_to">CC To</string>
+    <string name="cc">CC</string>
+    <string name="assignees">Assignees</string>
+    <string name="budget">BUDGET</string>
+    <string name="select_image_for_workitem">Select Image for task</string>
+
+    <string-array name="year_array">
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string name="title_activity_user_daily_report">UserDailyReportActivity</string>
+
+    <!-- Toast Messages -->
+    <string name="network_error">Please check your network connectivity</string>
+    <string name="PleaseEnterFirstname">Please enter the First Name</string>
+    <string name="PleaseEnterLastname">Please enter the Last Name</string>
+    <string name="PleaseEnterMobile">Please enter a valid mobile number</string>
+    <string name="PleaseEnterEmail">Please enter a valid email id</string>
+    <string name="PleaseEnterAdd1">Please enter address line1</string>
+    <string name="PleaseEnterCity">Please enter city</string>
+    <string name="PleaseEnterState">Please enter state</string>
+    <string name="PleaseEnterCountry">Please enter country</string>
+    <string name="PleaseEnterPincode">Please enter pincode</string>
+    <string name="err_lat_lng">Please select latitude,longitude from map</string>
+    <string name="PleaseEnterOTP">Please enter OTP</string>
+    <string name="PleaseEnterName">Please enter name</string>
+    <string name="PasswordDontMatch">Passwords do not match</string>
+    <string name="PleaseEnterUsername">Please enter username</string>
+    <string name="PleaseEnterPassword">Please enter password</string>
+    <string name="DuplicateLeave">Leave already exists</string>
+    <string name="DuplicateHoliday">Holiday already exists</string>
+    <string name="PleaseEnterLeave">Please enter leave</string>
+
+    <string name="PleaseEnterValidHoliday">You cannot add holiday for previous years</string>
+    <string name="PleaseEnterHoliday">Please enter holiday</string>
+    <string name="PleaseEnterCompanyName">Please enter name</string>
+    <string name="PleaseEnterCompanyMobile">Please enter valid mobile number</string>
+    <string name="PleaseEnterCompanyLandline">Please enter valid landline number</string>
+    <string name="PleaseEnterCompanyEmail">Please enter email id</string>
+    <string name="PleaseEnterLogo">Please enter logo</string>
+    <string name="PleaseEnterCompanyDesc">Please enter description</string>
+    <string name="back_press">Please press back again to exit</string>
+    <string name="PleaseEnterStartDate">Please enter start date</string>
+    <string name="PleaseEnterEndDate">Please enter end date</string>
+    <string name="PleaseEnterReason">Please enter reason</string>
+    <string name="select_workingdays">Please select at least one working day</string>
+    <string name="deduction_policy_data">Please enter all deduction policy data</string>
+    <string name="leave_bal">Please enter leave balance</string>
+    <string name="leave_bal_saved">Leave balance saved</string>
+    <string name="invitation_pending">You have already pending invitation, so please decline it first</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="enter_confirm_password">Please enter confirm password</string>
+    <string name="password_not_match">Passwords do not match</string>
+    <string name="mobile_not_zero">Mobile number cannot start with 0</string>
+    <string name="company_deleted">All users will be removed from this company. Are you sure you want to delete this company?</string>
+    <string name="confirm_resignation">Are you sure you want to resign from this company?</string>
+    <string name="confirm_logout">Are you sure you want to logout?</string>
+    <string name="confirm_withdraw">Are you sure you want to withdraw?</string>
+    <string name="select_assignee">Please select Assignee</string>
+    <string name="select_cc">Please select CC</string>
+    <string name="wait_for_attachment">Please wait till attachment gets uploaded</string>
+    <string name="PleaseEnterCustomerMobile">Please enter a valid customer contact</string>
+    <string name="PleaseEnterInvoice">Please enter Invoice Date</string>
+    <string name="start_time_less">Start Time should be less than End Time</string>
+    <string name="end_time_greater">End Time should be greater than Start Time</string>
+    <string name="start_date_less">Start Date should be less than End Date</string>
+    <string name="end_date_greater">End Date should be greater than Start Date</string>
+    <string name="min_hrs_less_than">Minimum hours less than 24</string>
+    <string name="avg_hrs_less_than">Average hours less than 24</string>
+    <string name="min_minutes_less_than">Minimum minutes less than 60</string>
+    <string name="avg_minutes_less_than">Average minutes less than 60</string>
+
+    <!-- Payroll Setup -->
+    <string name="enter_CTC">Please enter CTC</string>
+    <string name="enter_basicsalary">Please enter Basic Salary</string>
+    <string name="enter_hra">Please enter HRA</string>
+    <string name="enter_conveyance">Please enter conveyance Rs</string>
+    <string name="enter_medical">Please enter Medical Rs</string>
+    <string name="enter_variable_amt">Please enter Variable Amount</string>
+    <string name="enter_lta">Please enter LTA Rs</string>
+    <string name="enter_special_incentives">Please enter Special Incentives Rs</string>
+    <string name="enter_other_allowances">Please enter Other Allowances Rs</string>
+    <string name="enter_employee_contribution">Please enter Employee Contribution Rs</string>
+    <string name="enter_employer_contribution">Please enter Employer Contribution Rs</string>
+    <string name="enter_pt">Please enter Professional Tax Rs</string>
+    <string name="enter_tds">Please enter TDS Rs</string>
+    <string name="enter_other_deductions">Please enter Other Deductions Rs</string>
+    <string name="enter_vendor">Please enter Vendor</string>
+
+
+    <!-- Failed Messages -->
+    <string name="invitations_fail">No Company Invitations</string>
+    <string name="re_login">Please re-login to change your company</string>
+    <string name="no_users">No User added</string>
+    <string name="please_update_role">Please update user’s Role or Manager</string>
+    <string name="login_wait">Please sit back and wait, it will take time to sync your data</string>
+    <string name="no_notifications">No Notifications</string>
+    <string name="no_approvals">No Approvals</string>
+    <string name="no_invited_user">No Invited Users</string>
+    <string name="cant_delete">* You cannot delete Permanent Address</string>
+    <string name="no_tracking">You do not have rights to track your Team Members</string>
+    <string name="some_error">Something went wrong, please try again later</string>
+
+    <!-- GCM -->
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered.</string>
+    <string name="gcm_registered">From GCM: device successfully registered!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">From GCM: you got message!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="title_activity_current_location">CurrentLocationActivity</string>
+    <string name="title_activity_user_locations_adapter">UserLocationsAdapter</string>
+    <string name="title_activity_set_time_period">SetTimePeriodActivity</string>
+    <string name="title_activity_settings_adapter">SettingsAdapter</string>
+    <string name="title_activity_company_setup">CompanySetupActivity</string>
+    <string name="title_activity_verify_mobile">VerifyMobileActivity</string>
+    <string name="title_activity_user_details">UserDetailsActivity</string>
+    <string name="title_activity_profile_settings">ProfileSettingsActivity</string>
+    <string name="title_activity_change_mobile">ChangeMobileActivity</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="title_activity_invitation">InvitationActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_reset_password_for_member">ResetPasswordForMember</string>
+    <string name="title_activity_resign_user">ResignUserActivity</string>
+    <string name="title_activity_update_company_info">UpdateCompanyInfoActivity</string>
+    <string name="title_activity_manager_dashboard">ManagerDashboardActivity</string>
+    <string name="title_activity_manager_settings">ManagerSettingsActivity</string>
+    <string name="title_activity_client_list">ClientListActivity</string>
+    <string name="title_activity_create_customer">CreateCustomerActivity</string>
+    <string name="title_activity_select_location">SelectLocationActivity</string>
+    <string name="edit_project">Edit Project</string>
+    <string name="title_activity_users">UsersActivity</string>
+    <string name="title_activity_customer_details">CustomerDetailsActivity</string>
+    <string name="title_activity_address">AddressActivity</string>
+    <string name="title_activity_resignation_approval">ResignationApprovalActivity</string>
+    <string name="title_activity_your_managers">YourManagersActivity</string>
+    <string name="title_activity_customer_vendor_approval">CustomerVendorApprovalActivity</string>
+    <string name="title_activity_address_approval">AddressApprovalActivity</string>
+    <string name="title_activity_customer_vendor">CustomerVendorActivity</string>
+    <string name="title_activity_admin_dashboard_new">AdminDashboardNewActivity</string>
+    <string name="title_activity_add_holiday">AddHoliday</string>
+    <string name="title_activity_select_assignee_cc">SelectAssigneeCC</string>
+    <string name="title_activity_select_vendor">SelectVendorActivity</string>
+    <string name="title_activity_pending_tasks_fragment">PendingTasksFragment</string>
+
+    <!--Export-->
+    <string name="export_attendance">Attendance</string>
+    <string name="export_email">Enter email id</string>
+    <string name="export_send">SEND</string>
+    <string name="export_lable">Export</string>
+    <string name="err_attendance">Please select data to export</string>
+    <string name="err_month">Select Month and Year</string>
+    <string name="err_enter_valid_email">Please enter a valid email id</string>
+    <string name="err_email">Please enter email address</string>
+    <string name="err_date1">Please enter month and year</string>
+    <string name="err_date2">Please enter valid month and year</string>
+    <string name="err_sent">Reports have been sent to email id</string>
+    <string name="err_sent_report">reports will be mailed shortly.</string>
+    <string name="title_activity_update_user_payroll">UpdateUserPayrollActivity</string>
+    <string name="title_activity_pay_slip_admin">PaySlipAdminActivity</string>
+    <string name="title_activity_user_pay_slip">UserPaySLipActivity</string>
+    <string name="title_activity_email_dialog">EmailDialogActivity</string>
+    <string name="title_activity_add_expenses">AddExpensesActivity</string>
+
+    <!--Expenses-->
+    <string name="expense_period">Expense Period</string>
+    <string name="expense_head">Expense Head</string>
+    <string name="total_req_amt">Total Requested Amount</string>
+    <string name="total_approved_amt">Total Approved Amount</string>
+    <string name="expenses_comments">Requester Comments</string>
+    <string name="expenses_app_comments">Approver Comments</string>
+    <string name="start_date">START DATE</string>
+    <string name="end_date">END DATE</string>
+    <string name="expense_type">Expense Type</string>
+    <string name="req_amt">Requested Amount</string>
+    <string name="app_amt">Approved Amount</string>
+    <string name="bill_no">Bill Number</string>
+    <string name="attach_bill">Add Attachment</string>
+    <string name="approved_by">Accepted By</string>
+    <string name="rejected_by">Rejected By</string>
+
+    <string name="title_activity_update_expense">UpdateExpenseActivity</string>
+
+    <!-- Export -->
+    <string-array name="report_type_array">
+        <item>Attendance Report</item>
+        <item>Leave Report</item>
+        <item>Tracking Report</item>
+        <item>Expense Report</item>
+    </string-array>
+
+    <string name="report">Report Type</string>
+    <string name="emailID">Email ID</string>
+    <string name="title_activity_add_task">AddTaskActivity</string>
+    <string name="title_activity_assign_cc">AssignCCActivity</string>
+
+
+</resources>

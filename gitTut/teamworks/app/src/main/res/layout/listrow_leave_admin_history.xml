@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green_box_bg"
+            android:layout_alignParentBottom="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvContactImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"
+                android:maxLength="1"
+                android:textColor="@color/green_header" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/relativeRight"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/imgColor"
+                android:layout_width="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlApproveReject"
+                android:layout_below="@+id/imgColor"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="10sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlReject"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvStatus"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:background="@drawable/request_reject"
+                        android:focusableInTouchMode="false"
+                        android:focusable="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlApprove"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/rlReject"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvStatus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:background="@drawable/request_approve"
+                        android:focusableInTouchMode="false"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/relativeRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlImg">
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:maxLines="2"
+                android:text="djfhghjf   "
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textmedium" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_below="@+id/tvUserName">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="desc   "
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvLeaveType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:text="desc   "
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

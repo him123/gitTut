@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvMonthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Select Month and Year"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLeftArrow"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tvMonthYear"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btnArrowleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_left"
+                android:clickable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeRightArrow"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tvMonthYear"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btnArrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrow_right"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeSelectAll"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/relativeDate"
+        android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/checkBoxSelectAll"
+            android:layout_toRightOf="@+id/checkBoxSelectAll"
+            android:focusable="false"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="Select All"
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_save"
+        android:layout_below="@+id/relativeSelectAll"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_blue">
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/generate"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

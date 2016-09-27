@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:background="@drawable/nav_back"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/rlBack"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/add_holiday"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlName"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="@string/client_name"
+            android:textColor="@color/gray"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:maxLength="100"
+            android:singleLine="true"
+            android:background="@color/transparent"
+            android:id="@+id/etName"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textmedium"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:layout_marginLeft="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDate"
+        android:layout_below="@+id/rlName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="@string/date"
+            android:textColor="@color/gray"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:background="@color/transparent"
+            android:id="@+id/tvDate"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textmedium"
+            android:layout_marginLeft="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSave"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/rlDate"
+        android:background="@drawable/rectangle_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header">
+
+        <TextView
+            android:textSize="@dimen/textmedium"
+            android:textColor="@color/white"
+            android:text="@string/save_update"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlDelete"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/rlSave"
+        android:background="@drawable/rectangle_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header">
+
+        <TextView
+            android:textSize="@dimen/textmedium"
+            android:textColor="@color/red"
+            android:text="@string/delete_holiday"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

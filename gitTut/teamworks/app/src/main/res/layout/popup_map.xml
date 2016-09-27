@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/cream"
+    android:id="@+id/ll_root">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/select_location"
+        android:padding="@dimen/medium_margin"
+        android:layout_margin="@dimen/medium_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textLarge"
+        android:textStyle="bold"
+        android:background="@color/green_header" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_margin="@dimen/medium_margin"
+        class="com.google.android.gms.maps.MapFragment" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_margin="@dimen/medium_margin"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btnselector"
+        android:padding="@dimen/medium_margin"
+        android:textColor="@color/white" />
+</LinearLayout>

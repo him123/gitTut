@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/green_header"
+        android:visibility="gone"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_logout"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/logout_icon"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/rl_logout"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_icon"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/search"
+                android:paddingLeft="40dp"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:id="@+id/rl_workitem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_centerInParent="true"
+                android:background="@drawable/work_item_icon" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible"
+                android:background="@color/red"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_project"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_centerInParent="true"
+                android:background="@drawable/project_icon" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="@color/red"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_attendance_leave"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_centerInParent="true"
+                android:background="@drawable/attendance_icon" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="@color/red"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_notification"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_centerInParent="true"
+                android:background="@drawable/notification_icon" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="@color/red"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_other_menu"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_centerInParent="true"
+                android:background="@drawable/other_menu_icon" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="@color/red"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/green_header" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerUserDashboard"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

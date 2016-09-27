@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green_header">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/leave"
+        android:layout_margin="@dimen/medium_margin"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/applyforleave"
+        android:layout_margin="@dimen/medium_margin"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/medium_margin">
+        <!--First Raw :Leave Typr-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/medium_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/leavetype"
+                android:textColor="@color/white"
+                android:layout_weight="0.4"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/textmedium"
+                android:layout_margin="@dimen/small_margin" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.6"
+                android:padding="@dimen/small_margin"
+                android:layout_margin="@dimen/small_margin" />
+        </LinearLayout>
+
+        <!--Second Raw Check in Time-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/small_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/startdate"
+                android:textColor="@color/white"
+                android:layout_weight="0.4"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/textmedium"
+                android:layout_margin="@dimen/small_margin" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/dateformat"
+                android:background="@color/white"
+                android:layout_weight="0.6"
+                android:padding="@dimen/small_margin"
+                android:layout_margin="@dimen/small_margin" />
+        </LinearLayout>
+        <!--Third Raw Check Out Time-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/small_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/enddate"
+                android:textColor="@color/white"
+                android:layout_weight="0.4"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/textmedium"
+                android:layout_margin="@dimen/small_margin" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/dateformat"
+                android:background="@color/white"
+                android:layout_weight="0.6"
+                android:padding="@dimen/small_margin"
+                android:layout_margin="@dimen/small_margin" />
+        </LinearLayout>
+        <!--Fourth Raw Reason-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/small_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reason"
+                android:textColor="@color/white"
+                android:layout_weight="0.4"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/textmedium"
+                android:layout_margin="@dimen/small_margin" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="@string/reason"
+                android:lines="3"
+                android:background="@color/white"
+                android:layout_weight="0.6"
+                android:padding="@dimen/small_margin"
+                android:layout_margin="@dimen/small_margin" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/medium_margin"
+            android:padding="@dimen/medium_margin"
+            android:background="@drawable/btnselector" />
+    </LinearLayout>
+
+
+</LinearLayout>

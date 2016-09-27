@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:minHeight="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlLogo"
+
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+          <!--  <ImageView
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:id="@+id/imgWhite"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+
+            <ImageView
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:layout_margin="2dp"
+                android:id="@+id/imgLogo"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:id="@+id/tvContactImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"
+                android:maxLength="1"
+                android:textColor="@color/green_header" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rlLogo"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/relativeName"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ftdfgdghdrghery"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textmedium"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/tvUserName" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="late by 2 mins"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/red"
+                    android:layout_below="@+id/relativeTimes"
+                    android:id="@+id/tvAttendanceStatus" />
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/tvUserName"
+                    android:id="@+id/relativeTimes">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:gravity="center_vertical"
+                        android:id="@+id/linearNewTimes">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="13sp"
+                            android:singleLine="true"
+                            android:id="@+id/tvNewTimeIn"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="13sp"
+                            android:singleLine="true"
+                            android:id="@+id/tvNewTimeOut"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@+id/linearNewTimes"
+                        android:id="@+id/linearOldTimes">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/gray"
+                            android:textSize="13sp"                            android:singleLine="true"
+                            android:id="@+id/tvOldTimeIn"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/gray"
+                            android:textSize="13sp"
+                            android:singleLine="true"
+                            android:id="@+id/tvOldTimeOut"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearBottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeTop">
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:id="@+id/relativeLeftArrow">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:background="@drawable/arrow_left"
+                        android:id="@+id/btnArrowleft"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/relativeDate"
+                    android:clickable="true"
+                    android:layout_toRightOf="@+id/relativeLeftArrow">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:id="@+id/tvDate1"
+                        android:text="25 Aug,"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:focusable="false"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvDate2"
+                        android:text="2015"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:focusable="false"
+                        android:textColor="@color/gray"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/tvDate1"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/relativeRightArrow"
+                    android:visibility="visible"
+                    android:layout_toRightOf="@+id/relativeDate">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right"
+                        android:id="@+id/btnArrowRight"
+                        android:clickable="false"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+<!--
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/tvExport"
+                android:singleLine="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_alignParentRight="true"
+               android:gravity="center"
+                android:background="@color/green_box_bg"
+                android:text="@string/export_csv"/>-->
+
+            </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:id="@+id/list_attendance_history"></ListView>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:id="@+id/tvNoHistory"
+        android:text="No attendance history for selected date!!" />
+
+
+ <!--   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:id="@+id/linearBottom"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/btnExportExcel"
+            android:background="@color/green_header"
+            android:text="@string/export_csv" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/btnExportPdf"
+            android:background="@color/green_header"
+            android:text="@string/export_pdf" />
+    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green_header">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/pay_slip"
+        android:layout_margin="@dimen/small_margin"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Big Bang Innovations Pvt. Ltd."
+        android:textColor="@color/white"
+        android:textSize="@dimen/textLarge"
+        android:layout_gravity="center_horizontal" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/emp_id"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="12345"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/DOJ"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="12345"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/emp_name"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:textSize="@dimen/textSmall"
+            android:text="ABC XYZ"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/pf_ac"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="XXXXXXXX"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/designation"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="Manager"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:text="@string/earned_leave"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="6.5"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/bank_ac"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="XXXXXXXXXXXX"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/DOJ"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="12345"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+    <!--////////////Seperator-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_margin="@dimen/medium_margin"
+        android:layout_alignParentBottom="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/earnings"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="@string/amount"
+            android:textStyle="bold"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/deductions"
+            android:textStyle="bold"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="@string/amount"
+            android:textStyle="bold"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/basic_salary"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="10,000"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/pf"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/hra"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="4,000"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/employee"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="1200"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/conveyance"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="1600"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/employer"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="1200"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/medical"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="1250"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/p_tax"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/telephone"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="1250"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/income_tax"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="1000"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/lta"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="0"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:text="@string/other_deductions"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="0"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/special_incentives"
+            android:layout_margin="@dimen/small_margin" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="100"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:textSize="@dimen/textSmall"
+            android:layout_gravity="center_vertical"
+            android:text="@string/other_allowances"
+            android:layout_margin="@dimen/small_margin" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+            android:text="XXXXXXXXXXXX"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical"
+
+            android:visibility="invisible"
+            android:textSize="@dimen/textSmall"
+            android:layout_margin="@dimen/small_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSmall"
+            android:textStyle="bold"
+            android:text="@string/net_pay"
+            android:layout_margin="@dimen/medium_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSmall"
+            android:textStyle="bold"
+            android:text="@string/net_pay"
+            android:layout_margin="@dimen/medium_margin" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnselector"
+        android:padding="@dimen/medium_margin"
+        android:text="@string/accept"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btn_acceptPaySlip" />
+</LinearLayout>

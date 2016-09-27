@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/roundrect_white"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearImg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@+id/tv_time"
+            android:id="@+id/linearImage">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                 
+
+                <linearlayout
+                    android:id="@+id/linearHorizontalscrollview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+                            
+                </linearlayout>
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:text="+12"
+            android:id="@+id/tv_time"
+            android:textColor="@color/green_header"
+            android:layout_width="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/textmedium"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <!--   <View
+           android:layout_width="100dp"
+           android:layout_height="10dp"
+           android:background="@color/transparent"
+           android:layout_marginLeft="10dp"
+           android:layout_below="@+id/linearImg"></View>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/map_marker"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/linearImg" />
+
+</RelativeLayout>

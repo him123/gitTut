@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/linearImage">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/viewUserImg"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"></ImageView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:weightSum="1"
+        android:layout_toRightOf="@+id/linearImage"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rutu Patel"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:id="@+id/tvUserName"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_ismanual"
+            android:layout_marginTop="10dp" />
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/relativeInOut"
+            android:layout_below="@+id/tvUserName">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In: "
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:id="@+id/tvCheckIn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:22 PM"
+                android:layout_toRightOf="@+id/tvCheckIn"
+                android:textSize="12sp"
+                android:id="@+id/tvCheckInTime" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Out: "
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/tvCheckInTime"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:id="@+id/tvCheckOut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:22 PM"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/tvCheckOut"
+                android:id="@+id/tvCheckOutTime" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imgVwManual"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/manual_attendance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/tvUpdateNewTime"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="Updated"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:id="@+id/relativeUpdateTime"
+            android:layout_below="@+id/relativeInOut">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In: "
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:id="@+id/tvUpdateCheckIn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:22 PM"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvUpdateCheckIn"
+                android:textSize="12sp"
+                android:id="@+id/tvUpdateCheckInTime" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Out: "
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvUpdateCheckInTime"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:id="@+id/tvUpdateCheckOut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:22 PM"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvUpdateCheckOut"
+                android:id="@+id/tvUpdateCheckOutTime" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/tvUpdate"
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="Updated"
+                android:layout_centerInParent="true" />
+
+      <!--      <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linearBtn"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/btn_acceptApproval"
+                    android:background="@drawable/accept" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/reject_icon"
+                    android:id="@+id/btn_rejectApproval" />
+                </LinearLayout>-->
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeMain">
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="60dp"
+        android:paddingLeft="5dp"
+        android:visibility="gone"
+        android:id="@+id/relativeUpdateTime"
+        android:layout_below="@+id/relativeMain">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In: "
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:id="@+id/tvUpdateCheckIn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:22 PM"
+            android:layout_toRightOf="@+id/tvUpdateCheckIn"
+            android:textSize="12sp"
+            android:id="@+id/tvUpdateCheckInTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out: "
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/tvUpdateCheckInTime"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:id="@+id/tvUpdateCheckOut" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:22 PM"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/tvUpdateCheckOut"
+            android:id="@+id/tvUpdateCheckOutTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/imgUpdate"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerInParent="true"
+            android:text="Updated"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/relativeMain"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/date"
+                android:singleLine="true"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="70dp"
+                android:layout_height="35dp">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/btn_ok"
+                    android:visibility="gone"
+                    android:background="@drawable/accept" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/btn_ok"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:background="@drawable/reject_icon"
+                    android:id="@+id/btn_cancel" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:text="Update"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:textSize="10dp"
+                    android:id="@+id/tvUpdateTime"
+                    android:textColor="@android:color/white"
+                    android:background="@color/btnColor" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/title"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="5dp"
+                android:layout_toLeftOf="@+id/relative1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In: "
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:id="@+id/tvCheckIn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:22 PM"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tvCheckIn"
+                    android:textSize="12sp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/tvCheckInTime" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Out: "
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/tvCheckInTime"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12sp"
+                    android:id="@+id/tvCheckOut" />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:22 PM"
+                    android:textSize="12sp"
+                    android:clickable="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tvCheckOut"
+                    android:id="@+id/tvCheckOutTime" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

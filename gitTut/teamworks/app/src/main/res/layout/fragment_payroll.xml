@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:background="@color/green_header"
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/rlPyroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPayroll"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="PAYROLL"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/viewPayroll"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPayslip"
+            android:layout_toRightOf="@+id/rlActive"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPayslip"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp"
+                android:text="PAY SLIP"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/viewPayslip"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerDemo"
+        android:layout_below="@+id/header1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/green_header">
+
+
+        <TextView
+            android:id="@+id/tv_listTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_history"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/completed_icon">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@color/green_box_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_filter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_toLeftOf="@id/rl_add"
+            android:background="@drawable/btnselector"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_today"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+
+    <ListView
+        android:id="@+id/listItems"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></ListView>
+
+    <TextView
+        android:id="@+id/tv_noItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/medium_margin"
+        android:gravity="center"
+        android:text="@string/no_item_presents"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textLarge"
+        android:visibility="gone" />
+</LinearLayout>

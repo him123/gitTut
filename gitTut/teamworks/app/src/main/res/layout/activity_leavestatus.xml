@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearTop"
+        android:background="@color/green_header"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:text="@string/leavestatus"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view"
+        android:layout_below="@+id/linearTop"
+        android:background="@color/white" />
+
+    <ListView
+        android:layout_below="@+id/view"
+        android:id="@+id/listvwLeaveStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearBottom">
+
+    </ListView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_leave_applied"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:id="@+id/tvNoHistory" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:id="@+id/linearBottom"
+
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/btnExportExcel"
+            android:background="@color/green_header"
+            android:text="@string/export_csv" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/btnExportPdf"
+            android:background="@color/green_header"
+            android:text="@string/export_pdf" />
+    </LinearLayout>
+</RelativeLayout>

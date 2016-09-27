@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bigbang.superteam.expenses.AddExpensesActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/green_header">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nav_back"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rlBack"
+            android:text="Add Expenses"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_next_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rectangle_blue">
+
+            <TextView
+                android:id="@+id/tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_next_back"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/rl_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_expenses_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_working_days"
+                android:layout_marginTop="20dp"
+                android:text="@string/expense_period"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/rlTime"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_start_time_"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/green_box_bg" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/start_date"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv1"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textmedium" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_end_time_"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/green_box_bg" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/green_box_bg" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/end_date"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textmedium" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/textmedium" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddExpHead"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/expenses_head"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_expenses_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expense_head"
+                    android:padding="5dp"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/imgAdd"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/add_bg"
+                    android:layout_marginRight="5dp"
+                    android:padding="3dp"
+                    android:src="@drawable/add_address" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutExpensesHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_total_req"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/total_req_amt"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etTotalReqAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_total_req"
+                    android:inputType="numberDecimal"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlApprovels"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_total_app"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/total_approved_amt"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etTotalAppAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_total_app"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:maxLength="9"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/expenses_comments"
+                android:textColor="@color/gray" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etComments"
+                android:minHeight="100dp"
+                android:gravity="top"
+                android:maxLength="300"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_app_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expenses_app_comments"
+                android:textColor="@color/gray" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etApprovalsComments"
+                android:minHeight="100dp"
+                android:gravity="top"
+                android:maxLength="300"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

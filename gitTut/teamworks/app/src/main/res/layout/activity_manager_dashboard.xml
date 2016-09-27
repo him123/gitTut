@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/green_header">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:inputType="textCapWords"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/medium_margin"
+            android:layout_weight=".3"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_work_items"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_workItemsList"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/workitem_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/work_items"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_approvals"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_approvalsList"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/approval_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/approvals"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_notifications"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_notificationsList"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/notification1_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/notifications"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/medium_margin"
+            android:layout_weight=".3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_leave_attendance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_usersList"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/attendance1_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendance_leave"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tracking"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_Tracking"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/tracking_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tracking"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_projects"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_projectsList"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/projects_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/projects"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".3"
+            android:orientation="horizontal">
+            android:layout_margin="@dimen/medium_margin">
+
+
+            <LinearLayout
+                android:id="@+id/ll_work_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_history"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/history_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/workitem_history"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_attendance_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_attendanceHistory"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/attendance1_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/attendance_history"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_settings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_settings"
+                    style="@style/adminButtonStyle"
+                    android:background="@drawable/settings1_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/settings"
+                    android:textColor="@color/btnPressedColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
